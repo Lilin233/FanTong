@@ -23,9 +23,9 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
         var string:NSString = ""
         let dataTask = manager.dataTaskWithRequest(request) { (response, data, error) -> Void in
             if error == nil{
-                print("success: -----\(response )")
+//                print("success: -----\(response )")
                 string = NSString(data: data as! NSData, encoding: NSUTF8StringEncoding)!
-                print(string)
+//                print(string)
 //                let par = NSXMLParser(data: data as! NSData)
 //                par.delegate = self
 //                par.parse()
