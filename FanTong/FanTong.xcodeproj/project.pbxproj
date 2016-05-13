@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		100932F37044D015D1CD1855 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D0DCBCB2837EB14EDF429 /* libPods.a */; };
+		2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D61CE5EA1C00120B28 /* Constant.swift */; };
+		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
 		FA0B5E291C925C070042770F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E281C925C070042770F /* base64.m */; };
 		FA0B5E2C1C925C5A0042770F /* HmacSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2B1C925C5A0042770F /* HmacSha1.m */; };
 		FA0B5E301C925FEA0042770F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2F1C925FEA0042770F /* NSData+Base64.m */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AF4B6D61CE5EA1C00120B28 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
 		2C3A8EE104DDF2D1B61C83AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		800D0DCBCB2837EB14EDF429 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E585DE8559ED2248903B424D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +67,22 @@
 				2C3A8EE104DDF2D1B61C83AA /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2AF4B6D51CE5EA0000120B28 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				2AF4B6D61CE5EA1C00120B28 /* Constant.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		2AF4B6D81CE5EEA500120B28 /* ProtocolExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */,
+			);
+			name = ProtocolExtension;
 			sourceTree = "<group>";
 		};
 		67584B0CE7ACF805DC0B528B /* Frameworks */ = {
@@ -148,7 +168,9 @@
 		FA471F021C916A7300262EA7 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				2AF4B6D81CE5EEA500120B28 /* ProtocolExtension */,
 				FA0B5E2D1C925FCC0042770F /* Ext */,
+				2AF4B6D51CE5EA0000120B28 /* Constant */,
 				FA0B5E261C925BFC0042770F /* Util */,
 				FA471F051C916AAA00262EA7 /* 3rdParty */,
 				FA471F031C916A8800262EA7 /* Manager */,
@@ -303,6 +325,8 @@
 			files = (
 				FA0B5E291C925C070042770F /* base64.m in Sources */,
 				FA471F111C9191E200262EA7 /* Extension.swift in Sources */,
+				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
+				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
 				FA29EB611C9123E700727548 /* ViewController.swift in Sources */,
 				FA471F0C1C916D6900262EA7 /* Module.swift in Sources */,
 				FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */,
