@@ -1,1 +1,2 @@
+pod 'YYModel'
 pod 'AFNetworking', '~> 3.0'

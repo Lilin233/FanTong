@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		100932F37044D015D1CD1855 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D0DCBCB2837EB14EDF429 /* libPods.a */; };
+		071EB7211A376AD2CF564B16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBF00ED7AFBD927E2DEB54 /* libPods.a */; };
+		2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */; };
+		2A074FFA1CEEB3ED00FEEA4C /* FTStatusCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */; };
+		2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */; };
+		2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A71CEDB0AA00F9545A /* FTModels.swift */; };
+		2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */; };
+		2A8175AC1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */; };
 		2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D61CE5EA1C00120B28 /* Constant.swift */; };
 		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
 		FA0B5E291C925C070042770F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E281C925C070042770F /* base64.m */; };
@@ -24,10 +30,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07CBF00ED7AFBD927E2DEB54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTimelineTableViewCell.swift; sourceTree = "<group>"; };
+		2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellView.swift; sourceTree = "<group>"; };
+		2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKLabel.swift; sourceTree = "<group>"; };
+		2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		2A8175A11CEDA65F00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		2A8175A71CEDB0AA00F9545A /* FTModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTModels.swift; sourceTree = "<group>"; };
+		2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusLayout.swift; sourceTree = "<group>"; };
+		2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusTimeLineViewController.swift; sourceTree = "<group>"; };
 		2AF4B6D61CE5EA1C00120B28 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
 		2C3A8EE104DDF2D1B61C83AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		800D0DCBCB2837EB14EDF429 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E585DE8559ED2248903B424D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0B5E271C925C070042770F /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		FA0B5E281C925C070042770F /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
@@ -53,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				100932F37044D015D1CD1855 /* libPods.a in Frameworks */,
+				071EB7211A376AD2CF564B16 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +83,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2A074FF31CEEA7A400FEEA4C /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				2A074FF81CEEB38C00FEEA4C /* Control */,
+				2A074FF71CEEB37800FEEA4C /* Views */,
+				2A074FF61CEEB36100FEEA4C /* Model */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		2A074FF61CEEB36100FEEA4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A8175A71CEDB0AA00F9545A /* FTModels.swift */,
+				2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2A074FF71CEEB37800FEEA4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */,
+				2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2A074FF81CEEB38C00FEEA4C /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		2A074FFB1CEEB79100FEEA4C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
 		2AF4B6D51CE5EA0000120B28 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,18 +135,12 @@
 			name = Constant;
 			sourceTree = "<group>";
 		};
-		2AF4B6D81CE5EEA500120B28 /* ProtocolExtension */ = {
-			isa = PBXGroup;
-			children = (
-				2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */,
-			);
-			name = ProtocolExtension;
-			sourceTree = "<group>";
-		};
 		67584B0CE7ACF805DC0B528B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				800D0DCBCB2837EB14EDF429 /* libPods.a */,
+				2A8175A11CEDA65F00F9545A /* AFNetworking.framework */,
+				2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */,
+				07CBF00ED7AFBD927E2DEB54 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +159,7 @@
 		FA0B5E2D1C925FCC0042770F /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */,
 				FA471F101C9191E200262EA7 /* Extension.swift */,
 				FA0B5E2E1C925FEA0042770F /* NSData+Base64.h */,
 				FA0B5E2F1C925FEA0042770F /* NSData+Base64.m */,
@@ -168,7 +221,7 @@
 		FA471F021C916A7300262EA7 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				2AF4B6D81CE5EEA500120B28 /* ProtocolExtension */,
+				2A074FFB1CEEB79100FEEA4C /* Factory */,
 				FA0B5E2D1C925FCC0042770F /* Ext */,
 				2AF4B6D51CE5EA0000120B28 /* Constant */,
 				FA0B5E261C925BFC0042770F /* Util */,
@@ -189,6 +242,7 @@
 		FA471F041C916A9F00262EA7 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2A074FF31CEEA7A400FEEA4C /* Timeline */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -324,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0B5E291C925C070042770F /* base64.m in Sources */,
+				2A8175AC1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift in Sources */,
 				FA471F111C9191E200262EA7 /* Extension.swift in Sources */,
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
@@ -332,7 +387,12 @@
 				FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */,
 				FA0B5E301C925FEA0042770F /* NSData+Base64.m in Sources */,
 				FA29EB5F1C9123E700727548 /* AppDelegate.swift in Sources */,
+				2A074FFA1CEEB3ED00FEEA4C /* FTStatusCellView.swift in Sources */,
+				2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */,
 				FA0B5E2C1C925C5A0042770F /* HmacSha1.m in Sources */,
+				2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */,
+				2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */,
+				2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +505,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FanTong/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -461,6 +525,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FanTong/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
