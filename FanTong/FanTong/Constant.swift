@@ -8,7 +8,39 @@
 
 import Foundation
 
-///常量
+/// 屏幕宽度
+let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
+
+/// 屏幕高度
+let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+
+/// cell顶部留白
+let kStatusCellTopMargin: CGFloat = 16
+
+/// cell左右留白
+let kStatusCellLeftMargin: CGFloat = 15
+
+/// 标题高度
+let kStatusCellTitleHeight: CGFloat = 30
+
+/// 内容离着标题的留白
+let kStatusCellTextPadding: CGFloat = 10
+
+/// 头像宽度
+let kStatusCellAvatarWidth: CGFloat = 60
+
+/// text宽度
+let kStatusCellTextWidth: CGFloat = SCREEN_WIDTH - kStatusCellTextPadding - kStatusCellLeftMargin * 2 - kStatusCellAvatarWidth
+
+/// status cell toolbar height
+
+let kStatusCellToolbarHeight: CGFloat = 22
+//status字体，分别为text， title， time字体
+let kStatusCellTextFont: UIFont = UIFont.systemFontOfSize(17)
+let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(18)
+let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(16)
+
+
 public enum Constant{
 
     //饭否应用key和secret
@@ -18,9 +50,19 @@ public enum Constant{
     }
     ///饭否接口URL
     enum FanouURL: String{
-        case REQUEST_TOKEN_URL = "http://fanfou.com/oauth/request_token",
-             ACCESS_TOKEN_URL = "http://fanfou.com/oauth/access_token",
-             Friends_IDS = "http://api.fanfou.com/friends/ids.json"
+        case
+            //OAUTH
+            REQUEST_TOKEN_URL = "http://fanfou.com/oauth/request_token",
+            ACCESS_TOKEN_URL = "http://fanfou.com/oauth/access_token",
+            FRIENDS_IDS = "http://api.fanfou.com/friends/ids.json",
+            CONTEXT_TIMELINE = "http://api.fanfou.com/statuses/context_timeline.json",
+        
+            //USERS
+            USERS_SHOW = "http://api.fanfou.com/users/show.json",
+        
+            //Statuses
+            STATUSES_HOME_TIMELINE = "http://api.fanfou.com/statuses/home_timeline.json"
+
     }
     
     

@@ -14,6 +14,8 @@ class FTStatusCellView: UIView {
     var titleLabel: LKLabel!
     var textLabel: LKLabel!
     var timeLabel: LKLabel!
+    var toolbar: FTStatusCellToolBarView!
+    var cell: FTTimelineTableViewCell!
     var layout: FTStatusLayout!{
         didSet{
             self.setHeight(layout.height)
@@ -35,6 +37,7 @@ class FTStatusCellView: UIView {
         addTitleView()
         addTextView()
         addTimeView()
+        addToolbar()
     }
     func addAvatarView(){
         avatarView = UIImageView(frame: CGRect(x: kStatusCellLeftMargin, y: kStatusCellTopMargin, width: kStatusCellAvatarWidth, height: kStatusCellAvatarWidth))
@@ -54,8 +57,13 @@ class FTStatusCellView: UIView {
     }
     func addTimeView(){
         timeLabel = LKLabel(frame: CGRectMake(SCREEN_WIDTH - 100 - kStatusCellLeftMargin, kStatusCellTopMargin, 100, kStatusCellTitleHeight), text: "", textColor: nil, font: kStatusCellTimeFont, textalignment: NSTextAlignment.Right)
-        timeLabel.autoresizingMask = [.FlexibleTopMargin]
+        timeLabel.autoresizingMask = .FlexibleTopMargin
         addSubview(timeLabel)
+    }
+    func addToolbar(){
+        toolbar = FTStatusCellToolBarView(frame: CGRect(x: textLabel.left, y: self.height - kStatusCellToolbarHeight, width: kStatusCellTextWidth, height: kStatusCellToolbarHeight))
+        toolbar.autoresizingMask = [.FlexibleTopMargin]
+        addSubview(toolbar)
     }
     //MARK: - Private Method
     private func layoutStatusTextLabel(){

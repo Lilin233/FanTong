@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable {
+class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate {
     
     var layouts: [FTStatusLayout]? = []
     var status: [Status]? = []
@@ -18,7 +18,10 @@ class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, U
         requestData()
         addTableView()
     }
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
     //MARK: - Add SubViews
     func addTableView(){
         timelineTableView = UITableView(frame: view.bounds, style: .Plain)
@@ -52,18 +55,21 @@ class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let identifier = "cellID"
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? FTTimelineTableViewCell
         if cell == nil{
-            cell = FTTimelineTableViewCell(style: .Default, reuseIdentifier: identifier) as UITableViewCell
+            cell = FTTimelineTableViewCell(style: .Default, reuseIdentifier: identifier)
         }
-        (cell as! FTTimelineTableViewCell).layout = layouts![indexPath.row]
-        return cell!
+        cell?.layout = self.layouts![indexPath.row]
+        cell?.delegate = self
+        
+        return cell! as UITableViewCell
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return layouts![indexPath.row].height
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
+    //MARK: - FTStatusCellDelegate
+    func repostButtonClick(cell: FTTimelineTableViewCell) {
+        print(("id-------------") + cell.layout.status.id);
+    }
 }

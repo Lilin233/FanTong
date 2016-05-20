@@ -7,9 +7,13 @@
 //
 
 import UIKit
+protocol FTStatusCellDelegate{
+    func repostButtonClick(cell: FTTimelineTableViewCell)
+}
 
 class FTTimelineTableViewCell: UITableViewCell {
     var statusView: FTStatusCellView!
+    var delegate: FTStatusCellDelegate?
     var layout: FTStatusLayout!{
        didSet{
             self.setHeight(layout.height)
@@ -42,6 +46,8 @@ class FTTimelineTableViewCell: UITableViewCell {
     func addStatusView(){
         statusView = FTStatusCellView(frame: self.contentView.bounds)
         statusView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        statusView.cell = self
+        statusView.toolbar.cell = self
         contentView.addSubview(statusView)
     }
 }

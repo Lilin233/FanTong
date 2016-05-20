@@ -14,6 +14,7 @@
 		2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A71CEDB0AA00F9545A /* FTModels.swift */; };
 		2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */; };
 		2A8175AC1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */; };
+		2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */; };
 		2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D61CE5EA1C00120B28 /* Constant.swift */; };
 		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
 		FA0B5E291C925C070042770F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E281C925C070042770F /* base64.m */; };
@@ -39,6 +40,7 @@
 		2A8175A71CEDB0AA00F9545A /* FTModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTModels.swift; sourceTree = "<group>"; };
 		2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusLayout.swift; sourceTree = "<group>"; };
 		2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusTimeLineViewController.swift; sourceTree = "<group>"; };
+		2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellToolBarView.swift; sourceTree = "<group>"; };
 		2AF4B6D61CE5EA1C00120B28 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
 		2C3A8EE104DDF2D1B61C83AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */,
 				2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */,
+				2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				FA471F111C9191E200262EA7 /* Extension.swift in Sources */,
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
+				2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */,
 				FA29EB611C9123E700727548 /* ViewController.swift in Sources */,
 				FA471F0C1C916D6900262EA7 /* Module.swift in Sources */,
 				FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */,

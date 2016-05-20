@@ -15,8 +15,6 @@ class FTStatusLayout: NSObject {
     var textHeight: CGFloat = 0
     /// 图片高度 没有图片时候高度为0
     let statusImageHeihgt: CGFloat = 0
-    /// 底部工具栏高度
-    let kStatusCellToolbarHeight: CGFloat = 30
     var status: Status!
     private override init() {
         super.init()
