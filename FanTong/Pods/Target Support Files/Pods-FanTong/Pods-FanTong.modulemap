@@ -1,0 +1,6 @@
+framework module Pods_FanTong {
+  umbrella header "Pods-FanTong-umbrella.h"
+
+  export *
+  module * { export * }
+}

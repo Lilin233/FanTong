@@ -1,40 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ij4-Zy-Iqh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="N9S-XC-DQ5">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FanTong" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="Ij4-Zy-Iqh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztd-E7-gXt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IBd-OD-iJg" kind="relationship" relationship="rootViewController" id="bPw-f3-GJc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3V-fP-jHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-763" y="199"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wxa-rm-qgI">
+            <objects>
+                <viewController id="IBd-OD-iJg" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="eTg-hP-3k5"/>
+                        <viewControllerLayoutGuide type="bottom" id="8N6-8W-wi5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="G8s-4s-eCf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welecome To FanTong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jt-5y-bVu">
-                                <rect key="frame" x="214" y="230" width="173" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-iX-rYq">
+                                <rect key="frame" x="20" y="151" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53w-oa-lap">
+                                <rect key="frame" x="20" y="248" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-uH-3DJ">
+                                <rect key="frame" x="230" y="325" width="119" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="Xw4-3R-cjs"/>
+                                    <constraint firstAttribute="height" constant="60" id="hEG-lw-yd7"/>
+                                </constraints>
+                                <state key="normal" title="登陆"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1jt-5y-bVu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="AkH-Tn-Mp9"/>
-                            <constraint firstItem="1jt-5y-bVu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2b-WZ-riE"/>
+                            <constraint firstItem="53w-oa-lap" firstAttribute="top" secondItem="eqC-iX-rYq" secondAttribute="bottom" constant="67" id="50s-ki-ITR"/>
+                            <constraint firstItem="Mwg-uH-3DJ" firstAttribute="leading" secondItem="G8s-4s-eCf" secondAttribute="leading" constant="230" id="9Mi-F6-koK"/>
+                            <constraint firstItem="eqC-iX-rYq" firstAttribute="top" secondItem="eTg-hP-3k5" secondAttribute="bottom" constant="87" id="BZm-m6-niY"/>
+                            <constraint firstItem="Mwg-uH-3DJ" firstAttribute="top" secondItem="53w-oa-lap" secondAttribute="bottom" constant="47" id="Xog-4V-cL1"/>
+                            <constraint firstItem="eqC-iX-rYq" firstAttribute="leading" secondItem="G8s-4s-eCf" secondAttribute="leadingMargin" id="YNf-40-lJ8"/>
+                            <constraint firstItem="eqC-iX-rYq" firstAttribute="trailing" secondItem="G8s-4s-eCf" secondAttribute="trailingMargin" id="cED-ko-VtO"/>
+                            <constraint firstItem="eqC-iX-rYq" firstAttribute="leading" secondItem="53w-oa-lap" secondAttribute="leading" id="f7J-cB-oNh"/>
+                            <constraint firstItem="eqC-iX-rYq" firstAttribute="trailing" secondItem="53w-oa-lap" secondAttribute="trailing" id="z17-cy-4zL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sT6-zb-8Ag"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaE-x8-yeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="305"/>
+            <point key="canvasLocation" x="-113" y="199"/>
         </scene>
     </scenes>
 </document>

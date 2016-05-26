@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-FanTong.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2268F00B59C0D9142F8BF1B7C1E760F2</key>
+		<key>064E776BDDB88028BD974C57D70170E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
+		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7C01CF1F4B9CA38D928EEDA1721E4BE</key>
+		<key>67EB0DD3EF24712115F180363DC3EE6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8664E4A6635088D2E9FB788947CD2242</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>990CEC5F48E288F5DBDC6A4D0E6D18CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

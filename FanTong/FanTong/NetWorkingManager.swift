@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 public enum HttpMethod: String{
     case GET, POST, DELETE
 }
