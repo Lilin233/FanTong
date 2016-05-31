@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 /// 屏幕宽度
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 

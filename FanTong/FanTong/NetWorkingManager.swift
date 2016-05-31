@@ -23,9 +23,8 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
         if httpMethod == .GET{
             let dataTask = manager.GET(urlString, parameters: params, progress: nil, success: { (task, data) -> Void in
                 complete(data as! NSData)
-                
                 }) { (task, error) -> Void in
-                print(error)
+                print("error: ----------- \(error)")
             }
             dataTask?.resume()
 
@@ -38,24 +37,33 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
             })
             dataTask?.resume()
         }
-        //        let url = NSURL(string: urlString)
-        //        let request = NSMutableURLRequest(URL: url!)
-        //        request.HTTPMethod = "GET"
-        //        request.setValue("application/xml", forHTTPHeaderField: "content-type")
-        //        var string:NSString = ""
-        //        let dataTask = manager.dataTaskWithRequest(request) { (response, data, error) -> Void in
-        //            if error == nil{
-        //                string = NSString(data: data as! NSData, encoding: NSUTF8StringEncoding)!
-        //                complete(string)
-        //
-        //            }else{
-        //                print("error: -----\(error)")
-        //            }
-        //        }
-        //        dataTask.resume()
 
     }
     
+    
+//    func requestData(urlString: String, complete: (NSData) -> ()){
+//        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+//        let manager = AFHTTPSessionManager(sessionConfiguration: config)
+//        manager.requestSerializer = AFHTTPRequestSerializer()
+//        manager.responseSerializer = AFHTTPResponseSerializer()
+//
+//        let url = NSURL(string: urlString)
+//        let request = NSMutableURLRequest(URL: url!)
+//        request.HTTPMethod = "GET"
+//        request.setValue("application/xml", forHTTPHeaderField: "content-type")
+//        var string:NSString = ""
+//        let dataTask = manager.dataTaskWithRequest(request) { (response, data, error) -> Void in
+//            if error == nil{
+//                string = NSString(data: data as! NSData, encoding: NSUTF8StringEncoding)!
+//                complete(string)
+//
+//            }else{
+//                print("error: -----\(error)")
+//            }
+//        }
+//        dataTask.resume()
+//
+//    }
     func parserDidStartDocument(parser: NSXMLParser) {
         print("start")
     }

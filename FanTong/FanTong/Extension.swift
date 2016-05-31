@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension String{
     func encodeStringURL() -> String{
         return CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, self, nil, ":&=;+!@#$()',*/", CFStringBuiltInEncodings.UTF8.rawValue) as String
