@@ -9,11 +9,12 @@
 import UIKit
 
 class FTStatusCellView: UIView {
-
+    let imageViewCorner: CGFloat = 6
     var avatarView: UIImageView!
     var titleLabel: LKLabel!
     var textLabel: LKLabel!
     var timeLabel: LKLabel!
+    var imageView: UIImageView!
     var toolbar: FTStatusCellToolBarView!
     var cell: FTTimelineTableViewCell!
     var layout: FTStatusLayout!{
@@ -37,12 +38,15 @@ class FTStatusCellView: UIView {
         addTitleView()
         addTextView()
         addTimeView()
+        addImageView()
         addToolbar()
     }
     func addAvatarView(){
         avatarView = UIImageView(frame: CGRect(x: kStatusCellLeftMargin, y: kStatusCellTopMargin, width: kStatusCellAvatarWidth, height: kStatusCellAvatarWidth))
         avatarView.layer.cornerRadius = 8
         avatarView.layer.masksToBounds = true
+        avatarView.layer.borderWidth = 1
+        avatarView.layer.borderColor = UIColor.lightGrayColor().CGColor
         addSubview(avatarView)
     }
     func addTitleView(){
@@ -59,6 +63,14 @@ class FTStatusCellView: UIView {
         timeLabel.autoresizingMask = .FlexibleTopMargin
         addSubview(timeLabel)
     }
+    func addImageView(){
+        imageView = UIImageView(frame: CGRect(x: titleLabel.left, y: textLabel.bottom + kStatusCellTextPadding, width: kStatusCellTextWidth, height: kStatusImageHeihgt))
+        imageView.layer.masksToBounds = true;
+        imageView.layer.cornerRadius = imageViewCorner;
+        imageView.hidden = true;
+        imageView.contentMode = .ScaleAspectFit
+        addSubview(imageView)
+    }
     func addToolbar(){
         toolbar = FTStatusCellToolBarView(frame: CGRect(x: textLabel.left, y: self.height - kStatusCellToolbarHeight, width: kStatusCellTextWidth, height: kStatusCellToolbarHeight))
         toolbar.autoresizingMask = [.FlexibleTopMargin]
@@ -70,5 +82,10 @@ class FTStatusCellView: UIView {
         titleLabel.text = self.layout.status.user.screen_name
         textLabel.text = self.layout.status.text
         avatarView.sd_setImageWithURL(NSURL.init(string: self.layout.status.user.profile_image_url_large))
+        if layout.status.photo.imageurl.characters.count > 0 {
+            imageView.sd_setImageWithURL(NSURL.init(string: self.layout.status.photo.imageurl))
+            imageView.hidden = false
+        }
+
     }
 }

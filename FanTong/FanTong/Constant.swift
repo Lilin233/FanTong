@@ -27,17 +27,19 @@ let kStatusCellTitleHeight: CGFloat = 30
 let kStatusCellTextPadding: CGFloat = 10
 
 /// 头像宽度
-let kStatusCellAvatarWidth: CGFloat = 60
+let kStatusCellAvatarWidth: CGFloat = 50
 
 /// text宽度
 let kStatusCellTextWidth: CGFloat = SCREEN_WIDTH - kStatusCellTextPadding - kStatusCellLeftMargin * 2 - kStatusCellAvatarWidth
+let kStatusImageHeihgt: CGFloat = 140
+
 
 /// status cell toolbar height
 
 let kStatusCellToolbarHeight: CGFloat = 22
 //status字体，分别为text， title， time字体
 let kStatusCellTextFont: UIFont = UIFont.systemFontOfSize(17)
-let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(18)
+let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(17)
 let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(16)
 
 let BODY_COLOR: UIColor = UIColor(colorLiteralRed: 0.996, green: 1, blue: 1, alpha: 1)

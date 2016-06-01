@@ -14,7 +14,6 @@ class FTStatusLayout: NSObject {
     ///内容高度
     var textHeight: CGFloat = 0
     /// 图片高度 没有图片时候高度为0
-    let statusImageHeihgt: CGFloat = 0
     var status: Status!
     private override init() {
         super.init()
@@ -32,9 +31,12 @@ class FTStatusLayout: NSObject {
         height += kStatusCellTitleHeight
         height += kStatusCellTextPadding
         height += textHeight
-        height += statusImageHeihgt
         height += kStatusCellTextPadding
         height += kStatusCellToolbarHeight
+        if status.photo.imageurl.characters.count > 0 {
+            height += kStatusImageHeihgt
+
+        }
     }
     /// 计算一条 Status 的 text 高度
     func layoutStatusText(){

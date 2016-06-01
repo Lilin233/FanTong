@@ -29,6 +29,7 @@ class FTStatusCellToolBarView: UIView {
         repostButton.setTitle("回复", forState: .Normal)
         repostButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         repostButton.addTarget(self, action: #selector(FTStatusCellToolBarView.repostButtonClick), forControlEvents: .TouchUpInside)
+        repostButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         addSubview(repostButton)
     }
     func addRepeatButton(){
@@ -36,14 +37,18 @@ class FTStatusCellToolBarView: UIView {
         repeatButton.setTitle("转发", forState: .Normal)
         repeatButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         repeatButton.addTarget(self, action: #selector(FTStatusCellToolBarView.repeatButtonClick), forControlEvents: .TouchUpInside)
+        repeatButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
+
         addSubview(repeatButton)
     }
     func addLikeButton(){
-        repostButton = UIButton(frame: CGRect(x: self.width / 3 * 2, y: 0, width: self.width / 3, height: self.height))
-        repostButton.setTitle("收藏", forState: .Normal)
-        repostButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        repostButton.addTarget(self, action: #selector(FTStatusCellToolBarView.likeButtonClick), forControlEvents: .TouchUpInside)
-        addSubview(repostButton)
+        likeButton = UIButton(frame: CGRect(x: self.width / 3 * 2, y: 0, width: self.width / 3, height: self.height))
+        likeButton.setTitle("收藏", forState: .Normal)
+        likeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        likeButton.addTarget(self, action: #selector(FTStatusCellToolBarView.likeButtonClick), forControlEvents: .TouchUpInside)
+        likeButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
+
+        addSubview(likeButton)
     }
 
     //MARK: - Actions
