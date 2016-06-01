@@ -8,13 +8,14 @@
 
 import UIKit
 
-class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate {
+class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate {
     
     var layouts: [FTStatusLayout]? = []
     var status: [Status]? = []
     var timelineTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "首页"
         requestData()
         addTableView()
     }
@@ -70,6 +71,12 @@ class FTStatusTimeLineViewController: UIViewController, UITableViewDataSource, U
     
     //MARK: - FTStatusCellDelegate
     func repostButtonClick(cell: FTTimelineTableViewCell) {
+        print(("id-------------") + cell.layout.status.id);
+    }
+    func repeatButtonClick(cell: FTTimelineTableViewCell) {
+        print(("id-------------") + cell.layout.status.id);
+    }
+    func likeButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);
     }
 }

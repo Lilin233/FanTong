@@ -11,9 +11,13 @@ import UIKit
 class FTStatusCellToolBarView: UIView {
     var cell: FTTimelineTableViewCell?
     var repostButton: UIButton!
+    var repeatButton: UIButton!
+    var likeButton: UIButton!
     override init(frame: CGRect) {
         super.init(frame: frame)
         addRepostButton()
+        addRepeatButton()
+        addLikeButton()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -21,19 +25,46 @@ class FTStatusCellToolBarView: UIView {
     
     //MARK: - Add SubViews
     func addRepostButton(){
-        repostButton = UIButton(frame: self.bounds)
-        repostButton.setTitle("转发", forState: .Normal)
-        repostButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        repostButton.backgroundColor = UIColor.blackColor()
-        repostButton.addTarget(self, action: "repostButtonClick", forControlEvents: .TouchUpInside)
+        repostButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.width / 3, height: self.height))
+        repostButton.setTitle("回复", forState: .Normal)
+        repostButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        repostButton.addTarget(self, action: #selector(FTStatusCellToolBarView.repostButtonClick), forControlEvents: .TouchUpInside)
+        addSubview(repostButton)
+    }
+    func addRepeatButton(){
+        repeatButton = UIButton(frame: CGRect(x: self.width / 3, y: 0, width: self.width / 3, height: self.height))
+        repeatButton.setTitle("转发", forState: .Normal)
+        repeatButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        repeatButton.addTarget(self, action: #selector(FTStatusCellToolBarView.repeatButtonClick), forControlEvents: .TouchUpInside)
+        addSubview(repeatButton)
+    }
+    func addLikeButton(){
+        repostButton = UIButton(frame: CGRect(x: self.width / 3 * 2, y: 0, width: self.width / 3, height: self.height))
+        repostButton.setTitle("收藏", forState: .Normal)
+        repostButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        repostButton.addTarget(self, action: #selector(FTStatusCellToolBarView.likeButtonClick), forControlEvents: .TouchUpInside)
         addSubview(repostButton)
     }
 
     //MARK: - Actions
     func repostButtonClick(){
-        if cell?.delegate is FTStatusTimeLineViewController{
+        if cell?.delegate is FTTimeLineViewController{
             cell?.delegate?.repostButtonClick(cell!)
         
         }
     }
+    func repeatButtonClick(){
+        if cell?.delegate is FTTimeLineViewController{
+            cell?.delegate?.repeatButtonClick(cell!)
+            
+        }
+    }
+
+    func likeButtonClick(){
+        if cell?.delegate is FTTimeLineViewController{
+            cell?.delegate?.likeButtonClick(cell!)
+            
+        }
+    }
+
 }

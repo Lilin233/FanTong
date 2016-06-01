@@ -41,7 +41,6 @@ class FTStatusCellView: UIView {
     }
     func addAvatarView(){
         avatarView = UIImageView(frame: CGRect(x: kStatusCellLeftMargin, y: kStatusCellTopMargin, width: kStatusCellAvatarWidth, height: kStatusCellAvatarWidth))
-        avatarView.backgroundColor = UIColor.blackColor()
         avatarView.layer.cornerRadius = 8
         avatarView.layer.masksToBounds = true
         addSubview(avatarView)
@@ -70,5 +69,6 @@ class FTStatusCellView: UIView {
         textLabel.setHeight(self.layout.textHeight)
         titleLabel.text = self.layout.status.user.screen_name
         textLabel.text = self.layout.status.text
+        avatarView.sd_setImageWithURL(NSURL.init(string: self.layout.status.user.profile_image_url_large))
     }
 }

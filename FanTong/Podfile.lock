@@ -17,20 +17,25 @@ PODS:
   - RxCocoa (2.4):
     - RxSwift (~> 2.4)
   - RxSwift (2.4)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - YYModel (1.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
+  - SDWebImage (~> 3.7)
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
   RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: ddc62860b3cef48f17e9acf691bb52ecdb953d63
+PODFILE CHECKSUM: 6de69bc06ed0f0ab0e55ab8c031523364f00d208
 
 COCOAPODS: 1.0.0

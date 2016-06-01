@@ -15,7 +15,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let token = NSUserDefaults.standardUserDefaults().valueForKey("oauth_token");
+        let tabbar = UITabBarController()
+        
+        let timeline = FTTimeLineViewController()
+        let timtlineNav = UINavigationController(rootViewController: timeline)
+        timtlineNav.tabBarItem.title = "首页"
+
+        let msg = FTMsgViewController()
+        let msgNav = UINavigationController(rootViewController: msg)
+        msgNav.tabBarItem.title = "消息"
+
+        let search = FTSearchViewController()
+        let searchNav = UINavigationController(rootViewController: search)
+        searchNav.tabBarItem.title = "发现"
+
+        let me = FTMeViewController()
+        let meNav = UINavigationController(rootViewController: me)
+        meNav.tabBarItem.title = "我"
+
+        
+        tabbar.viewControllers = [timtlineNav, msgNav, searchNav, meNav]
+        
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        window?.makeKeyAndVisible()
+        if token?.length < 0 {
+            window?.rootViewController = FTLoginViewController()
+        }else{
+            window?.rootViewController = tabbar;
+        }
         
         
         

@@ -40,6 +40,7 @@ let kStatusCellTextFont: UIFont = UIFont.systemFontOfSize(17)
 let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(18)
 let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(16)
 
+let BODY_COLOR: UIColor = UIColor(colorLiteralRed: 0.996, green: 1, blue: 1, alpha: 1)
 
 public enum Constant{
 

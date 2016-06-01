@@ -9,6 +9,9 @@
 import UIKit
 protocol FTStatusCellDelegate{
     func repostButtonClick(cell: FTTimelineTableViewCell)
+    func repeatButtonClick(cell: FTTimelineTableViewCell)
+    func likeButtonClick(cell: FTTimelineTableViewCell)
+
 }
 
 class FTTimelineTableViewCell: UITableViewCell {
@@ -19,7 +22,7 @@ class FTTimelineTableViewCell: UITableViewCell {
             self.setHeight(layout.height)
             self.contentView.setHeight(layout.height)
             statusView.layout = layout
-
+            
         }
     }
     override func awakeFromNib() {
@@ -36,6 +39,7 @@ class FTTimelineTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addStatusView()
+        self.backgroundColor = BODY_COLOR;
     }
 
     required init?(coder aDecoder: NSCoder) {

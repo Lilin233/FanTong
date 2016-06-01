@@ -6,3 +6,4 @@
 #import "base64.h"
 #import "HmacSha1.h"
 #import <YYModel/YYModel.h>
+#import <SDWebImage/UIImageView+WebCache.h>

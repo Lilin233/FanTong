@@ -28,7 +28,7 @@ class ViewController: UIViewController,FanFouParamsFormatable {
         view.addGestureRecognizer(tap)
     }
     func tap(){
-        self.presentViewController(FTStatusTimeLineViewController(), animated: true) { () -> Void in
+        self.presentViewController(FTTimeLineViewController(), animated: true) { () -> Void in
             
         }
     }

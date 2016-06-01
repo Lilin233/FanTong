@@ -16,26 +16,20 @@ class FTLoginViewController: FTBaseViewController, FanFouParamsFormatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loginButton.enabled = false
-        _ = usernameTextField.rx_text.subscribeNext({ (str) in
-            if str.characters.count > 0{
-                self.loginButton.enabled = true
-            }else{
-                self.loginButton.enabled = false
-
-            }
-        })
-        _ = pwdTextField.rx_text.subscribeNext({ (str) in
-            if str.characters.count > 0{
-                self.loginButton.enabled = true
-            }else{
-                self.loginButton.enabled = false
-                
-            }
-        })
+        let token = NSUserDefaults.standardUserDefaults().valueForKey("oauth_token");
+        usernameTextField.text = "1002351468@qq.com";
+        pwdTextField.text = "123456";
+        if token?.length > 0 {
+            self.navigationController?.pushViewController(FTTimeLineViewController(), animated: false)
+        }
+        
     }
-
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true;
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -43,7 +37,7 @@ class FTLoginViewController: FTBaseViewController, FanFouParamsFormatable {
     
     @IBAction func loginFanTong(sender: AnyObject) {
         
-        let url = self.formatURLString(Constant.FanouURL.ACCESS_TOKEN_URL.rawValue, params: ["x_auth_username=\(usernameTextField.text)", "x_auth_password=\(pwdTextField.text)", "x_auth_mode=client_auth"])
+        let url = self.formatURLString(Constant.FanouURL.ACCESS_TOKEN_URL.rawValue, params: ["x_auth_username=\(usernameTextField.text!)", "x_auth_password=\(pwdTextField.text!)", "x_auth_mode=client_auth"])
         NetWorkingManager.shareInstance.requestData(.GET, urlString: url) { (data) in
             let token = NSString(data: data, encoding: NSUTF8StringEncoding)
             let tokenArray = token?.componentsSeparatedByString("&")
@@ -51,6 +45,8 @@ class FTLoginViewController: FTBaseViewController, FanFouParamsFormatable {
             NSUserDefaults.standardUserDefaults().setValue(tokenArray?.last, forKey: "oauth_token_secret")
             NSUserDefaults.standardUserDefaults().synchronize()
             print(token)
+            self.navigationController?.pushViewController(FTTimeLineViewController(), animated: false)
+
         }
     }
 

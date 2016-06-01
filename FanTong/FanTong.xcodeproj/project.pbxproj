@@ -10,9 +10,12 @@
 		2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */; };
 		2A074FFA1CEEB3ED00FEEA4C /* FTStatusCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */; };
 		2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */; };
+		2A5DFE5B1CFEF3B400F2AA06 /* FTMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */; };
+		2A5DFE5D1CFEF3C600F2AA06 /* FTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */; };
+		2A5DFE5F1CFEF3D000F2AA06 /* FTMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */; };
 		2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A71CEDB0AA00F9545A /* FTModels.swift */; };
 		2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */; };
-		2A8175AC1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */; };
+		2A8175AC1CEDB5AF00F9545A /* FTTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */; };
 		2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */; };
 		2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D61CE5EA1C00120B28 /* Constant.swift */; };
 		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
@@ -37,11 +40,14 @@
 		2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellView.swift; sourceTree = "<group>"; };
 		2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKLabel.swift; sourceTree = "<group>"; };
+		2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMsgViewController.swift; sourceTree = "<group>"; };
+		2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSearchViewController.swift; sourceTree = "<group>"; };
+		2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMeViewController.swift; sourceTree = "<group>"; };
 		2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A11CEDA65F00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A71CEDB0AA00F9545A /* FTModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTModels.swift; sourceTree = "<group>"; };
 		2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusLayout.swift; sourceTree = "<group>"; };
-		2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusTimeLineViewController.swift; sourceTree = "<group>"; };
+		2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTimeLineViewController.swift; sourceTree = "<group>"; };
 		2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellToolBarView.swift; sourceTree = "<group>"; };
 		2AF4B6D61CE5EA1C00120B28 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
@@ -112,7 +118,7 @@
 		2A074FF81CEEB38C00FEEA4C /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				2A8175AB1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift */,
+				2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -123,6 +129,30 @@
 				2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */,
 			);
 			name = Factory;
+			sourceTree = "<group>";
+		};
+		2A5DFE571CFEF36300F2AA06 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+				2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */,
+			);
+			name = Msg;
+			sourceTree = "<group>";
+		};
+		2A5DFE581CFEF37100F2AA06 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		2A5DFE591CFEF37C00F2AA06 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */,
+			);
+			name = Me;
 			sourceTree = "<group>";
 		};
 		2AF4B6D51CE5EA0000120B28 /* Constant */ = {
@@ -218,6 +248,7 @@
 				FA29EB6A1C9123E700727548 /* Info.plist */,
 				FA471EFC1C91689000262EA7 /* FanTong-Bridging-Header.h */,
 				FA471F0B1C916D6900262EA7 /* Module.swift */,
+				FA29EB5E1C9123E700727548 /* AppDelegate.swift */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -227,7 +258,6 @@
 			children = (
 				FA471F021C916A7300262EA7 /* Global */,
 				FA471F041C916A9F00262EA7 /* Module */,
-				FA29EB5E1C9123E700727548 /* AppDelegate.swift */,
 				FA29EB601C9123E700727548 /* ViewController.swift */,
 			);
 			name = Src;
@@ -260,6 +290,9 @@
 			children = (
 				2AFA79A51CF7DB090094E855 /* Login */,
 				2A074FF31CEEA7A400FEEA4C /* Timeline */,
+				2A5DFE571CFEF36300F2AA06 /* Msg */,
+				2A5DFE581CFEF37100F2AA06 /* Search */,
+				2A5DFE591CFEF37C00F2AA06 /* Me */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -395,8 +428,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5DFE5B1CFEF3B400F2AA06 /* FTMsgViewController.swift in Sources */,
 				FA0B5E291C925C070042770F /* base64.m in Sources */,
-				2A8175AC1CEDB5AF00F9545A /* FTStatusTimeLineViewController.swift in Sources */,
+				2A8175AC1CEDB5AF00F9545A /* FTTimeLineViewController.swift in Sources */,
 				FA471F111C9191E200262EA7 /* Extension.swift in Sources */,
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
@@ -408,8 +442,10 @@
 				FA0B5E301C925FEA0042770F /* NSData+Base64.m in Sources */,
 				FA29EB5F1C9123E700727548 /* AppDelegate.swift in Sources */,
 				2A074FFA1CEEB3ED00FEEA4C /* FTStatusCellView.swift in Sources */,
+				2A5DFE5F1CFEF3D000F2AA06 /* FTMeViewController.swift in Sources */,
 				2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */,
 				FA0B5E2C1C925C5A0042770F /* HmacSha1.m in Sources */,
+				2A5DFE5D1CFEF3C600F2AA06 /* FTSearchViewController.swift in Sources */,
 				2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */,
 				2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */,
 				2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */,
