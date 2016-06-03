@@ -59,6 +59,12 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? FTTimelineTableViewCell
         if cell == nil{
             cell = FTTimelineTableViewCell(style: .Default, reuseIdentifier: identifier)
+        }else{
+            for view in (cell?.statusView.subviews)! {
+                if view.tag == 10001 {
+                    view.removeFromSuperview()
+                }
+            }
         }
         cell?.layout = self.layouts![indexPath.row]
         cell?.delegate = self

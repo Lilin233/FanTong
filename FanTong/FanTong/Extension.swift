@@ -27,6 +27,13 @@ extension String{
 //        let range = Range(start: self.startIndex.advancedBy(startIndex), end: self.startIndex.advancedBy(length))
 //        return self.substringWithRange(range)
 //    }
+    
+    func formatStatusSource() -> String{
+        var str = (self as NSString).stringByReplacingOccurrencesOfString("<", withString: "$")
+        str = str.stringByReplacingOccurrencesOfString(">", withString: "$")
+        let array = str.componentsSeparatedByString("$")
+        return array[2]
+    }
 }
 
 extension UIView{

@@ -36,9 +36,8 @@ class FTStatusCellView: UIView {
     func setupSubViews(){
         addAvatarView()
         addTitleView()
-        addTextView()
         addTimeView()
-        addImageView()
+        addTextView()
         addToolbar()
     }
     func addAvatarView(){
@@ -53,22 +52,24 @@ class FTStatusCellView: UIView {
         titleLabel = LKLabel(frame: CGRectMake(avatarView.right + kStatusCellTextPadding, kStatusCellTopMargin, kStatusCellTextWidth, kStatusCellTitleHeight), text: "", textColor: nil, font: kStatusCellTitleFont, textalignment: nil)
         addSubview(titleLabel)
     }
+    func addTimeView(){
+        timeLabel = LKLabel(frame: CGRectMake(titleLabel.left, titleLabel.bottom, SCREEN_WIDTH - titleLabel.left, kStatusTimelabelHeight), text: "", textColor: nil, font: kStatusCellTimeFont, textalignment: NSTextAlignment.Right)
+        timeLabel.font = kStatusCellTimeFont;
+        timeLabel.textColor = DETAIL_TEXT_COLOR;
+        addSubview(timeLabel)
+    }
+
     func addTextView(){
-        textLabel = LKLabel(frame: CGRectMake(avatarView.right + kStatusCellTextPadding, titleLabel.bottom + kStatusCellTextPadding, kStatusCellTextWidth, kStatusCellTitleHeight), text: "", textColor: nil, font: kStatusCellTextFont, textalignment: nil)
+        textLabel = LKLabel(frame: CGRectMake(avatarView.right + kStatusCellTextPadding, timeLabel.bottom + kStatusCellTextPadding, kStatusCellTextWidth, kStatusCellTitleHeight), text: "", textColor: nil, font: kStatusCellTextFont, textalignment: nil)
         textLabel.numberOfLines = 0
         addSubview(textLabel)
-    }
-    func addTimeView(){
-        timeLabel = LKLabel(frame: CGRectMake(SCREEN_WIDTH - 100 - kStatusCellLeftMargin, kStatusCellTopMargin, 100, kStatusCellTitleHeight), text: "", textColor: nil, font: kStatusCellTimeFont, textalignment: NSTextAlignment.Right)
-        timeLabel.autoresizingMask = .FlexibleTopMargin
-        addSubview(timeLabel)
     }
     func addImageView(){
         imageView = UIImageView(frame: CGRect(x: titleLabel.left, y: textLabel.bottom + kStatusCellTextPadding, width: kStatusCellTextWidth, height: kStatusImageHeihgt))
         imageView.layer.masksToBounds = true;
         imageView.layer.cornerRadius = imageViewCorner;
-        imageView.hidden = true;
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
+        imageView.tag = 10001;
         addSubview(imageView)
     }
     func addToolbar(){
@@ -82,9 +83,11 @@ class FTStatusCellView: UIView {
         titleLabel.text = self.layout.status.user.screen_name
         textLabel.text = self.layout.status.text
         avatarView.sd_setImageWithURL(NSURL.init(string: self.layout.status.user.profile_image_url_large))
+//        timeLabel.text = self.layout.status.created_at + self.layout.status.source
+        timeLabel.text = self.layout.status.source.formatStatusSource()
         if layout.status.photo.imageurl.characters.count > 0 {
+            self.addImageView()
             imageView.sd_setImageWithURL(NSURL.init(string: self.layout.status.photo.imageurl))
-            imageView.hidden = false
         }
 
     }

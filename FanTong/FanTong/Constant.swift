@@ -26,6 +26,9 @@ let kStatusCellTitleHeight: CGFloat = 30
 /// 内容离着标题的留白
 let kStatusCellTextPadding: CGFloat = 10
 
+/// time source高度
+let kStatusTimelabelHeight: CGFloat = 20
+
 /// 头像宽度
 let kStatusCellAvatarWidth: CGFloat = 50
 
@@ -40,7 +43,9 @@ let kStatusCellToolbarHeight: CGFloat = 22
 //status字体，分别为text， title， time字体
 let kStatusCellTextFont: UIFont = UIFont.systemFontOfSize(17)
 let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(17)
-let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(16)
+let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(15)
+
+let DETAIL_TEXT_COLOR: UIColor = UIColor(red: 0.600, green: 0.600, blue: 0.600, alpha: 1);
 
 let BODY_COLOR: UIColor = UIColor(colorLiteralRed: 0.996, green: 1, blue: 1, alpha: 1)
 

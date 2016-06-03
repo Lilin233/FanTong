@@ -29,14 +29,16 @@ class FTStatusLayout: NSObject {
         //累加cell中元素的高度
         height += kStatusCellTopMargin
         height += kStatusCellTitleHeight
+        height += kStatusTimelabelHeight
         height += kStatusCellTextPadding
         height += textHeight
         height += kStatusCellTextPadding
-        height += kStatusCellToolbarHeight
         if status.photo.imageurl.characters.count > 0 {
             height += kStatusImageHeihgt
+            height += kStatusCellTextPadding
 
         }
+        height += kStatusCellToolbarHeight
     }
     /// 计算一条 Status 的 text 高度
     func layoutStatusText(){
