@@ -21,13 +21,13 @@ let kStatusCellTopMargin: CGFloat = 16
 let kStatusCellLeftMargin: CGFloat = 15
 
 /// 标题高度
-let kStatusCellTitleHeight: CGFloat = 30
+let kStatusCellTitleHeight: CGFloat = 25
 
 /// 内容离着标题的留白
 let kStatusCellTextPadding: CGFloat = 10
 
 /// time source高度
-let kStatusTimelabelHeight: CGFloat = 20
+let kStatusTimelabelHeight: CGFloat = 16
 
 /// 头像宽度
 let kStatusCellAvatarWidth: CGFloat = 50
@@ -43,7 +43,7 @@ let kStatusCellToolbarHeight: CGFloat = 22
 //status字体，分别为text， title， time字体
 let kStatusCellTextFont: UIFont = UIFont.systemFontOfSize(17)
 let kStatusCellTitleFont: UIFont = UIFont.boldSystemFontOfSize(17)
-let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(15)
+let kStatusCellTimeFont: UIFont = UIFont.systemFontOfSize(13)
 
 let DETAIL_TEXT_COLOR: UIColor = UIColor(red: 0.600, green: 0.600, blue: 0.600, alpha: 1);
 
@@ -69,8 +69,8 @@ public enum Constant{
             USERS_SHOW = "http://api.fanfou.com/users/show.json",
         
             //Statuses
-            STATUSES_HOME_TIMELINE = "http://api.fanfou.com/statuses/home_timeline.json"
-
+            STATUSES_HOME_TIMELINE = "http://api.fanfou.com/statuses/home_timeline.json",
+            STATUSES_UPDATE = "http://api.fanfou.com/statuses/update.json"
     }
     
     

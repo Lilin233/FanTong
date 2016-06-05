@@ -83,8 +83,8 @@ class FTStatusCellView: UIView {
         titleLabel.text = self.layout.status.user.screen_name
         textLabel.text = self.layout.status.text
         avatarView.sd_setImageWithURL(NSURL.init(string: self.layout.status.user.profile_image_url_large))
-//        timeLabel.text = self.layout.status.created_at + self.layout.status.source
-        timeLabel.text = self.layout.status.source.formatStatusSource()
+        timeLabel.text = self.layout.status.created_at.formatStatusTime() + " 来自" + self.layout.status.source.formatStatusSource()
+//        timeLabel.text = self.layout.status.source.formatStatusSource()
         if layout.status.photo.imageurl.characters.count > 0 {
             self.addImageView()
             imageView.sd_setImageWithURL(NSURL.init(string: self.layout.status.photo.imageurl))

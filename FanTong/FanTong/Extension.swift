@@ -29,10 +29,66 @@ extension String{
 //    }
     
     func formatStatusSource() -> String{
+        if self == "网页" {
+            return self
+        }
         var str = (self as NSString).stringByReplacingOccurrencesOfString("<", withString: "$")
         str = str.stringByReplacingOccurrencesOfString(">", withString: "$")
         let array = str.componentsSeparatedByString("$")
         return array[2]
+    }
+    func formatStatusTime() -> String{
+        //一小时以内 显示 xx分钟以前
+        //时间为当天 显示为 xx小时以前
+        //昨天发的status 显示为 昨天xxx点，格式24h
+        //昨天之前发的status 显示为 MM:dd
+        //去年的status    显示为  yyyy-MM-dd
+        let format = NSDateFormatter()
+        format.dateFormat = "EEE MMM d HH:mm:ss zzzz yyyy"
+        let locale = NSLocale(localeIdentifier: "en_US")
+        format.locale = locale
+        let date = format.dateFromString(self)
+        
+        var inter = date?.timeIntervalSinceNow;
+        if inter < 0 {
+            inter = -inter!
+        }
+        let dayInter = floor(inter! / 86400)
+        let yestorday = floor(dayInter / 2)
+        let days = Int(dayInter)
+        let weaks = Int(ceil(dayInter / 7))
+        let months = Int(ceil(dayInter / 30))
+        let years = Int(ceil(dayInter / 365))
+        
+        if dayInter <= 0 {
+            if inter < 60 {
+                return "刚刚"
+            }
+            if inter < 120 {
+                return "1分钟前"
+            }
+            if inter < 60 * 60 {
+                return String(format:"%.0f", floor(inter! / 60)) + "分钟前"
+            }
+            if inter < 86400{
+                return String(format:"%.0f", floor(inter! / 3600)) + "小时前"
+            }
+            
+            
+        } else if yestorday <= 0 {
+            format.dateFormat = "HH:mm"
+            return "昨天" + format.stringFromDate(date!)
+        } else if months < 12  {
+            format.dateFormat = "MM-dd"
+            return (format.stringFromDate(date!) as NSString).stringByReplacingOccurrencesOfString("0", withString: "")
+
+        }else {
+            format.dateFormat = "yyyy-MM-d"
+
+            return format.stringFromDate(date!)
+            
+        }
+        return ""
     }
 }
 

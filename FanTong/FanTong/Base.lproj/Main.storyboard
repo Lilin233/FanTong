@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBd-OD-iJg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,6 +9,7 @@
         <!--Navigation Controller-->
         <scene sceneID="N9S-XC-DQ5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3V-fP-jHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ij4-Zy-Iqh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztd-E7-gXt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -18,14 +19,13 @@
                         <segue destination="IBd-OD-iJg" kind="relationship" relationship="rootViewController" id="bPw-f3-GJc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3V-fP-jHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-763" y="199"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Wxa-rm-qgI">
             <objects>
-                <viewController id="IBd-OD-iJg" customClass="FTLoginViewController" customModule="FanTong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="IBd-OD-iJg" customClass="FTLoginViewController" customModule="FanTong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eTg-hP-3k5"/>
                         <viewControllerLayoutGuide type="bottom" id="8N6-8W-wi5"/>

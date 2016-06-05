@@ -17,9 +17,11 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
     func requestData(httpMethod:HttpMethod,params: NSDictionary? = nil, urlString: String, complete: (NSData)->()){
         
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+
         let manager = AFHTTPSessionManager(sessionConfiguration: config)
         manager.requestSerializer = AFHTTPRequestSerializer()
         manager.responseSerializer = AFHTTPResponseSerializer()
+        manager.responseSerializer.acceptableContentTypes = Set(["application/x-www-form-urlencoded", "application/json"])
         if httpMethod == .GET{
             let dataTask = manager.GET(urlString, parameters: params, progress: nil, success: { (task, data) -> Void in
                 complete(data as! NSData)
@@ -29,6 +31,7 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
             dataTask?.resume()
 
         }else if httpMethod == .POST{
+            
             let dataTask = manager.POST(urlString, parameters: params, progress: nil, success: { (task, data) -> Void in
                 complete(data as! NSData)
                 }, failure: { (task, error) -> Void in

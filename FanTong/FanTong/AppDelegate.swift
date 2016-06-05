@@ -40,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
         if token?.length < 0 {
-            window?.rootViewController = FTLoginViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewControllerWithIdentifier("login")
+            window?.rootViewController = loginVC
         }else{
             window?.rootViewController = tabbar;
         }

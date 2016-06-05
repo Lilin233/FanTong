@@ -43,7 +43,13 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
             }
             self.timelineTableView.reloadData()
         }
-        
+    }
+    func statusUpdate(params: Array<String>){
+        let url = self.formatURLString(Constant.FanouURL.STATUSES_UPDATE.rawValue, params: params)
+        NetWorkingManager.shareInstance.requestData(.POST, urlString: url) { (data) -> () in
+            let result = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            print(result)
+        }
 
     }
     //MARK: - TableView Datasource
@@ -81,6 +87,8 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
     }
     func repeatButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);
+        statusUpdate(["status=", "repost_status_id=\(cell.layout.status.id)" , "source=饭桶"])
+//        statusUpdate(NSDictionary.init(objects: ["", cell.layout.status.id, "饭桶"], forKeys: ["status", "repost_status_id", "source"]))
     }
     func likeButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);
