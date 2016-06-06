@@ -17,6 +17,8 @@ protocol FanFouParamsFormatable{
     func oauthSignature(methodType: String, urlString:String, paramsString: String) -> String
     func formatURLString(urlString: String, params: Array<String>?) -> String
     func formatPostParams(urlString: String, params: Array<String>, dicParams: NSDictionary) -> NSDictionary
+    func formatPostParamsString(urlString: String, params: Array<String>, dicParams: NSDictionary, strParams: String) -> String
+
 }
 extension FanFouParamsFormatable{
     func timestamp() -> Int{
@@ -65,7 +67,6 @@ extension FanFouParamsFormatable{
 
         }
         let hash3 = HmacSha1.hmacsha1Base64(secret, text: baseString)
-        print(baseString)
         return hash3
     }
     func formatURLString(urlString: String, params: Array<String>?) -> String{
@@ -101,8 +102,29 @@ extension FanFouParamsFormatable{
         dic.setValue(self.timestamp(), forKey: "oauth_timestamp")
         dic.setValue(NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last, forKey: "oauth_token")
         dic.addEntriesFromDictionary(dicParams as [NSObject : AnyObject])
-        print(dic)
         return dic
+    }
+    func formatPostParamsString(urlString: String, params: Array<String>, dicParams: NSDictionary, strParams: String) -> String{
+//        let dic = NSMutableDictionary()
+        //拼接参数
+        let sortParams = self.oauthBaseParamsSplitString(urlString, params: params)
+        print(sortParams)
+        //获取参数的signature
+        var signature = self.oauthSignature("POST", urlString: urlString, paramsString: sortParams)
+        //替换 "+", "/"符号
+        signature = signature.stringByReplacingOccurrencesOfString("+", withString: "%2B")
+        signature = signature.stringByReplacingOccurrencesOfString("/", withString: "%2F")
+        
+        
+//        dic.setValue(signature, forKey: "signature")
+//        dic.setValue(Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue, forKey: "oauth_consumer_key")
+//        dic.setValue(String(self.nonceRandom()), forKey: "oauth_nonce")
+//        dic.setValue("HMAC-SHA1", forKey: "oauth_signature_method")
+//        dic.setValue(self.timestamp(), forKey: "oauth_timestamp")
+//        dic.setValue(NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last, forKey: "oauth_token")
+//        dic.addEntriesFromDictionary(dicParams as [NSObject : AnyObject])
+        let str = "oauth_consumer_key=\(Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue)&oauth_nonce=\(self.nonceRandom())&oauth_signature_method=HMAC-SHA1&oauth_timestamp=\(self.timestamp())&oauth_token=\(NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last!)&repost_status_id=08gHqrXjp5g&signature=\(signature)&source=FT&status=FT"
+        return str
     }
 
 

@@ -43,17 +43,21 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
 
     }
     
-    func updateStatus(urlString: String){
+    func updateStatus(urlString: String, params: String){
         let url = NSURL(string: urlString);
-        var postBody = NSMutableData()
-        postBody.appendData("".dataUsingEncoding(NSUTF8StringEncoding)!)
-        let request = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadRevalidatingCacheData, timeoutInterval: 20)
+        let postBody = NSMutableData()
+        postBody.appendData(params.dataUsingEncoding(NSUTF8StringEncoding)!)
+        let request = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 20)
         request.HTTPMethod = "POST"
+        request.setValue("OAuth", forHTTPHeaderField: "Authorization")
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.HTTPBody = postBody;
-        let error = NSError(domain: "error:", code: 0, userInfo: nil)
-        let connection = NSURLConnection(request: request, delegate: self)
-//        connection
+        let dataa = try! NSURLConnection .sendSynchronousRequest(request, returningResponse: nil)
+        
+        print(NSString(data: dataa, encoding: NSUTF8StringEncoding))
+        
+        
+        //        connection
 ////         
 ////            [postBody appendData:[@"key1=value1&key2=value2...." dataUsingEncoding:NSUTF8StringEncoding]];
 ////            NSMutableURLRequest *request=[[NSMutableURLRequest alloc]initWithURL:url
