@@ -44,9 +44,9 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
             self.timelineTableView.reloadData()
         }
     }
-    func statusUpdate(params: Array<String>){
-        let url = self.formatURLString(Constant.FanouURL.STATUSES_UPDATE.rawValue, params: params)
-        NetWorkingManager.shareInstance.requestData(.POST, urlString: url) { (data) -> () in
+    func statusUpdate(arrayParams: Array<String>, dicParams: NSDictionary){
+        let params = self.formatPostParams(Constant.FanouURL.STATUSES_UPDATE.rawValue, params: arrayParams, dicParams: dicParams)
+        NetWorkingManager.shareInstance.requestData(.POST, params:params, urlString: Constant.FanouURL.STATUSES_UPDATE.rawValue) { (data) -> () in
             let result = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
             print(result)
         }
@@ -87,7 +87,7 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
     }
     func repeatButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);
-        statusUpdate(["status=", "repost_status_id=\(cell.layout.status.id)" , "source=饭桶"])
+        statusUpdate(["status=饭桶", "repost_status_id=\(cell.layout.status.id)" , "source=饭桶"], dicParams: NSDictionary.init(objects: ["饭桶", cell.layout.status.id, "饭桶"], forKeys: ["status", "repost_status_id", "source"]))
 //        statusUpdate(NSDictionary.init(objects: ["", cell.layout.status.id, "饭桶"], forKeys: ["status", "repost_status_id", "source"]))
     }
     func likeButtonClick(cell: FTTimelineTableViewCell) {

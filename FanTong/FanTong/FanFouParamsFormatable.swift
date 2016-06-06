@@ -16,6 +16,7 @@ protocol FanFouParamsFormatable{
     func oauthBaseParamsSplitString(urlString: String, params: Array<String>?) -> String
     func oauthSignature(methodType: String, urlString:String, paramsString: String) -> String
     func formatURLString(urlString: String, params: Array<String>?) -> String
+    func formatPostParams(urlString: String, params: Array<String>, dicParams: NSDictionary) -> NSDictionary
 }
 extension FanFouParamsFormatable{
     func timestamp() -> Int{
@@ -64,6 +65,7 @@ extension FanFouParamsFormatable{
 
         }
         let hash3 = HmacSha1.hmacsha1Base64(secret, text: baseString)
+        print(baseString)
         return hash3
     }
     func formatURLString(urlString: String, params: Array<String>?) -> String{
@@ -79,6 +81,28 @@ extension FanFouParamsFormatable{
         sortParams = sortParams + "&oauth_signature=\(signature)"
         return urlString + "?" + sortParams.k_substringFromIndex(1)
 
+    }
+    func formatPostParams(urlString: String, params: Array<String>, dicParams: NSDictionary) -> NSDictionary{
+        let dic = NSMutableDictionary()
+        //拼接参数
+        let sortParams = self.oauthBaseParamsSplitString(urlString, params: params)
+        print(sortParams)
+        //获取参数的signature
+        var signature = self.oauthSignature("POST", urlString: urlString, paramsString: sortParams)
+        //替换 "+", "/"符号
+        signature = signature.stringByReplacingOccurrencesOfString("+", withString: "%2B")
+        signature = signature.stringByReplacingOccurrencesOfString("/", withString: "%2F")
+
+        
+        dic.setValue(signature, forKey: "signature")
+        dic.setValue(Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue, forKey: "oauth_consumer_key")
+        dic.setValue(String(self.nonceRandom()), forKey: "oauth_nonce")
+        dic.setValue("HMAC-SHA1", forKey: "oauth_signature_method")
+        dic.setValue(self.timestamp(), forKey: "oauth_timestamp")
+        dic.setValue(NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last, forKey: "oauth_token")
+        dic.addEntriesFromDictionary(dicParams as [NSObject : AnyObject])
+        print(dic)
+        return dic
     }
 
 

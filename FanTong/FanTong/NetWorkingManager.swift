@@ -43,6 +43,33 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
 
     }
     
+    func updateStatus(urlString: String){
+        let url = NSURL(string: urlString);
+        var postBody = NSMutableData()
+        postBody.appendData("".dataUsingEncoding(NSUTF8StringEncoding)!)
+        let request = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadRevalidatingCacheData, timeoutInterval: 20)
+        request.HTTPMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = postBody;
+        let error = NSError(domain: "error:", code: 0, userInfo: nil)
+        let connection = NSURLConnection(request: request, delegate: self)
+//        connection
+////         
+////            [postBody appendData:[@"key1=value1&key2=value2...." dataUsingEncoding:NSUTF8StringEncoding]];
+////            NSMutableURLRequest *request=[[NSMutableURLRequest alloc]initWithURL:url
+////                                                                     cachePolicy:NSURLRequestReloadIgnoringCacheData
+//                                                                 timeoutInterval:20.0f];
+//            [request setHTTPMethod: @"POST"];
+//            [request setValue: @"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//            [request setHTTPBody:postBody];
+//            NSError *error = nil;
+//            NSHTTPURLResponse* urlResponse = nil;
+//            NSData *responseData = [NSURLConnection sendSynchronousRequest:request
+//                                                         returningResponse:&urlResponse error:&error];
+//            NSString *result = [[NSString alloc] initWithData:responseData
+//                                                     encoding:NSUTF8StringEncoding];
+//            NSLog(@"结果：%@",result);
+    }
     
 //    func requestData(urlString: String, complete: (NSData) -> ()){
 //        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
