@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import TDOAuth
 class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate {
     
     var layouts: [FTStatusLayout]? = []
@@ -87,10 +87,29 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         print(("id-------------") + cell.layout.status.id);
     }
     func repeatButtonClick(cell: FTTimelineTableViewCell) {
-        print(("id-------------") + cell.layout.status.id);
-        statusUpdate(["status=饭桶", "repost_status_id=\(cell.layout.status.id)" , "source=饭桶"], dicParams: NSDictionary.init(objects: ["饭桶", cell.layout.status.id, "饭桶"], forKeys: ["status", "repost_status_id", "source"]), strParams: "repost_status_id=\(cell.layout.status.id)&source=饭桶&status=饭桶")
+//        print(("id-------------") + cell.layout.status.id);
+//        statusUpdate(["status=\("ft".encodeStringURL())", "repost_status_id=\(cell.layout.status.id.encodeStringURL())"], dicParams: NSDictionary.init(objects: ["ft", cell.layout.status.id], forKeys: ["status", "repost_status_id"]), strParams: "repost_status_id=\(cell.layout.status.id)&status=ft")
         
-//        statusUpdate(NSDictionary.init(objects: ["", cell.layout.status.id, "饭桶"], forKeys: ["status", "repost_status_id", "source"]))
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        configuration.timeoutIntervalForRequest = 3
+        configuration.timeoutIntervalForResource = 3
+        let URLSession = NSURLSession(configuration: configuration)
+        
+        let  URLRequest = TDOAuth.URLRequestForPath("/statuses/update.json", parameters: NSDictionary.init(objects: ["ft", cell.layout.status.id], forKeys: ["status", "repost_status_id"]) as [NSObject : AnyObject], host: "api.fanfou.com", consumerKey: Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue, consumerSecret: Constant.FanfouAPPKey.OAUTH_CONSUMER_SECRET.rawValue, accessToken: NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last!, tokenSecret: ((NSUserDefaults.standardUserDefaults().valueForKey("oauth_token_secret") as! String).componentsSeparatedByString("=").last)!, scheme: "http", requestMethod: "POST", dataEncoding: .UrlEncodedForm, headerValues: nil, signatureMethod: .HmacSha1)
+            
+//            [[TDOAuth URLRequestForPath:path parameters:parametersDictionary host:SA_API_HOST consumerKey:SA_API_COMSUMER_KEY consumerSecret:SA_API_COMSUMER_SECRET accessToken:currentUser.token tokenSecret:currentUser.tokenSecret scheme:@"http" requestMethod:method dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1] mutableCopy];
+
+       let task =  URLSession.dataTaskWithRequest(URLRequest) { (data, reponse, error) in
+          print("1111111111111111111111111111")
+            if (error != nil){
+                print(error)
+            }else{
+                print(try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments))
+            }
+        }
+    
+        task.resume()
+    
     }
     func likeButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);

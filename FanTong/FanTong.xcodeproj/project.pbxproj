@@ -21,7 +21,7 @@
 		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
 		2AFA79A71CF7DB980094E855 /* FTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA79A61CF7DB980094E855 /* FTBaseViewController.swift */; };
 		2AFA79A91CF7DC010094E855 /* FTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA79A81CF7DC010094E855 /* FTLoginViewController.swift */; };
-		F1BD4598D7FCC153D8DC68A5 /* Pods_FanTong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E55092DE76D0505535DDDC /* Pods_FanTong.framework */; };
+		EA8E750588192A328E399E2B /* Pods_FanTong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */; };
 		FA0B5E291C925C070042770F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E281C925C070042770F /* base64.m */; };
 		FA0B5E2C1C925C5A0042770F /* HmacSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2B1C925C5A0042770F /* HmacSha1.m */; };
 		FA0B5E301C925FEA0042770F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2F1C925FEA0042770F /* NSData+Base64.m */; };
@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C98012D610D80B6FB4782A7 /* Pods-FanTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.debug.xcconfig"; sourceTree = "<group>"; };
+		14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FanTong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellView.swift; sourceTree = "<group>"; };
 		2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKLabel.swift; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
 		2AFA79A61CF7DB980094E855 /* FTBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBaseViewController.swift; sourceTree = "<group>"; };
 		2AFA79A81CF7DC010094E855 /* FTLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLoginViewController.swift; sourceTree = "<group>"; };
-		7A1FFCD5C20B458AF4B9C25B /* Pods-FanTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.release.xcconfig"; sourceTree = "<group>"; };
-		F0E55092DE76D0505535DDDC /* Pods_FanTong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FanTong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.release.xcconfig"; sourceTree = "<group>"; };
+		7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0B5E271C925C070042770F /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		FA0B5E281C925C070042770F /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
 		FA0B5E2A1C925C5A0042770F /* HmacSha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HmacSha1.h; sourceTree = "<group>"; };
@@ -79,13 +79,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BD4598D7FCC153D8DC68A5 /* Pods_FanTong.framework in Frameworks */,
+				EA8E750588192A328E399E2B /* Pods_FanTong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2506B1FBF8677F12F935E6B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */,
+				2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2A074FF31CEEA7A400FEEA4C /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,21 +180,12 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		33C2C90822AEEA88DD0BFAF5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1C98012D610D80B6FB4782A7 /* Pods-FanTong.debug.xcconfig */,
-				7A1FFCD5C20B458AF4B9C25B /* Pods-FanTong.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		67584B0CE7ACF805DC0B528B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2A8175A11CEDA65F00F9545A /* AFNetworking.framework */,
 				2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */,
-				F0E55092DE76D0505535DDDC /* Pods_FanTong.framework */,
+				14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 				FA29EB5D1C9123E700727548 /* FanTong */,
 				FA29EB5C1C9123E700727548 /* Products */,
 				67584B0CE7ACF805DC0B528B /* Frameworks */,
-				33C2C90822AEEA88DD0BFAF5 /* Pods */,
+				2506B1FBF8677F12F935E6B7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,13 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA29EB6D1C9123E700727548 /* Build configuration list for PBXNativeTarget "FanTong" */;
 			buildPhases = (
-				0DE8B3C35E190A7156B9F2A8 /* 📦 Check Pods Manifest.lock */,
+				6663C6EF41D512B520D08545 /* 📦 Check Pods Manifest.lock */,
 				FA29EB571C9123E700727548 /* Sources */,
 				FA29EB581C9123E700727548 /* Frameworks */,
 				FA29EB591C9123E700727548 /* Resources */,
-				0B055CC26EF317543C2E8855 /* 📦 Embed Pods Frameworks */,
-				0B7EE0F88BCB2FDAE98C1F9E /* 📦 Copy Pods Resources */,
-				106A985C07EAE78DB932652D /* Embed Pods Frameworks */,
+				4E1DF254516884D865AABB5D /* 📦 Embed Pods Frameworks */,
+				69D4A9E83AAE3B7376E56B3C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,7 +340,7 @@
 				TargetAttributes = {
 					FA29EB5A1C9123E700727548 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = T33D97QCKP;
+						DevelopmentTeam = Y4CZPABXLV;
 					};
 				};
 			};
@@ -377,7 +376,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B055CC26EF317543C2E8855 /* 📦 Embed Pods Frameworks */ = {
+		4E1DF254516884D865AABB5D /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,22 +391,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanTong/Pods-FanTong-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0B7EE0F88BCB2FDAE98C1F9E /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanTong/Pods-FanTong-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0DE8B3C35E190A7156B9F2A8 /* 📦 Check Pods Manifest.lock */ = {
+		6663C6EF41D512B520D08545 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,19 +406,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		106A985C07EAE78DB932652D /* Embed Pods Frameworks */ = {
+		69D4A9E83AAE3B7376E56B3C /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanTong/Pods-FanTong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanTong/Pods-FanTong-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -574,7 +558,7 @@
 		};
 		FA29EB6E1C9123E700727548 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C98012D610D80B6FB4782A7 /* Pods-FanTong.debug.xcconfig */;
+			baseConfigurationReference = 7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -595,7 +579,7 @@
 		};
 		FA29EB6F1C9123E700727548 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A1FFCD5C20B458AF4B9C25B /* Pods-FanTong.release.xcconfig */;
+			baseConfigurationReference = 2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

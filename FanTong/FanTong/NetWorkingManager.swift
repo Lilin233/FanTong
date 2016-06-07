@@ -49,10 +49,10 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
         postBody.appendData(params.dataUsingEncoding(NSUTF8StringEncoding)!)
         let request = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 20)
         request.HTTPMethod = "POST"
-        request.setValue("OAuth", forHTTPHeaderField: "Authorization")
+//        request.setValue("OAuth", forHTTPHeaderField: "Authorization")
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.HTTPBody = postBody;
-        let dataa = try! NSURLConnection .sendSynchronousRequest(request, returningResponse: nil)
+        let dataa = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
         
         print(NSString(data: dataa, encoding: NSUTF8StringEncoding))
         

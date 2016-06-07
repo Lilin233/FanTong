@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FanTong.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TDOAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,57 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>197A74237ECFB899E000FAC0A2220077</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CD439453D0AE0FE8C95D4CB83675A45</key>
+		<key>2A1BA7F903C83C26227DBAB5B6100753</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45ADA6EC304F974ADAAAA9B8EB44AE23</key>
+		<key>4D7EFA95033D363E07F5AA9BF6175CCD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>525EF83382BEE876865015E358852494</key>
+		<key>956A1A43E65928079A74E6EF39BEC072</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55BB55BF8F64114A091BB93F774050B6</key>
+		<key>A47F5EF3AF381F95D7E43D15D6D653DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64E31AE24B77F57165734A9C45C6F7F9</key>
+		<key>B5CDD3CC13893889428EA46F298D3C02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76A0D171A6680EBA1D9A7F40ED38E33F</key>
+		<key>B6A296EC9637DB8E548D78D72B167BC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BEA8C8DD2F0172F73A345DC045BC797</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A700E99D522D251832FB52EDE9656AB9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D450D86D6B06DCCC097C5538F8FA5174</key>
+		<key>BA119F35D4F6B91994A8BEA51405A4C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
