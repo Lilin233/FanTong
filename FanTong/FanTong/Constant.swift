@@ -59,6 +59,9 @@ public enum Constant{
     ///饭否接口URL
     enum FanouURL: String{
         case
+            //HOST
+            HOST = "api.fanfou.com",
+        
             //OAUTH
             REQUEST_TOKEN_URL = "http://fanfou.com/oauth/request_token",
             ACCESS_TOKEN_URL = "http://fanfou.com/oauth/access_token",
@@ -70,7 +73,7 @@ public enum Constant{
         
             //Statuses
             STATUSES_HOME_TIMELINE = "http://api.fanfou.com/statuses/home_timeline.json",
-            STATUSES_UPDATE = "http://api.fanfou.com/statuses/update.json"
+            STATUSES_UPDATE = "/statuses/update.json"
     }
     
     

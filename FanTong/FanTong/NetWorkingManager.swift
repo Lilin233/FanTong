@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNetworking
+import TDOAuth
 public enum HttpMethod: String{
     case GET, POST, DELETE
 }
@@ -32,13 +33,20 @@ class NetWorkingManager: NSObject, NSXMLParserDelegate {
 
         }else if httpMethod == .POST{
             
-            let dataTask = manager.POST(urlString, parameters: params, progress: nil, success: { (task, data) -> Void in
-                complete(data as! NSData)
-                }, failure: { (task, error) -> Void in
-                print(error)
+            let  URLRequest = TDOAuth.URLRequestForPath(urlString, parameters: params as! [NSObject : AnyObject], host: "api.fanfou.com", consumerKey: Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue, consumerSecret: Constant.FanfouAPPKey.OAUTH_CONSUMER_SECRET.rawValue, accessToken: NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last!, tokenSecret: ((NSUserDefaults.standardUserDefaults().valueForKey("oauth_token_secret") as! String).componentsSeparatedByString("=").last)!, scheme: "http", requestMethod: "POST", dataEncoding: .UrlEncodedForm, headerValues: nil, signatureMethod: .HmacSha1)
+
+//            let task =  URLSession.dataTaskWithRequest(URLRequest) { (data, reponse, error) in
+
+            
+            let dataTask = manager.dataTaskWithRequest(URLRequest, completionHandler: { (response, data, error) in
+                if error == nil{
+                    print(try! NSJSONSerialization.JSONObjectWithData(data as! NSData, options: .AllowFragments))
+                }else{
+                    print(error)
+                }
 
             })
-            dataTask?.resume()
+            dataTask.resume()
         }
 
     }

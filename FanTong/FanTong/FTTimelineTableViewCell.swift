@@ -8,8 +8,8 @@
 
 import UIKit
 protocol FTStatusCellDelegate{
+    func replyButtonClick(cell: FTTimelineTableViewCell)
     func repostButtonClick(cell: FTTimelineTableViewCell)
-    func repeatButtonClick(cell: FTTimelineTableViewCell)
     func likeButtonClick(cell: FTTimelineTableViewCell)
 
 }
