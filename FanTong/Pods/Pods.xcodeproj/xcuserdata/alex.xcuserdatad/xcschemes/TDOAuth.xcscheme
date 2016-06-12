@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8D74BC612D55AC02C19B0969'
+               BlueprintIdentifier = '3CF6D27732565771D8A54FDE'
                BlueprintName = 'TDOAuth'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TDOAuth.framework'>

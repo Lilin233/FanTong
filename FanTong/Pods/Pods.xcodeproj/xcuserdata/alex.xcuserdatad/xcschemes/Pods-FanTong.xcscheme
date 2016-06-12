@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7D4535226DA919E5FB25B999'
+               BlueprintIdentifier = '65FDFCC88DEA43AC75CC40BC'
                BlueprintName = 'Pods-FanTong'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_FanTong.framework'>

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>120BD38F931BA15491BEBC3700A1426D</key>
+		<key>05EC626F7696A3C730D6A8458971DD56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,22 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F07698CA00D3C944D914D1F9EFA0285</key>
+		<key>289B43D55D075B59971F1B5DBAF30CC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C17EEF2975A957EE559B7F8E116662E</key>
+		<key>52F34E74F6885901D77D6279DCDAFBA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C60217B8B39D54EA2A7BF2560A646CA</key>
+		<key>6847254D016329D4A531D34ED2B6DF81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>934F636BDDF0BAA439B36CBE2BC3959D</key>
+		<key>739835273D3187AA48694DCEA0F934FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B874E3EAE29762405738C913DAFAC29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFCB9FB4751AE3206A277D539B04760D</key>
+		<key>C5F3435757012A4C816D9B7D53A9B8FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5411B4220D57D7A4D3E6E2E21C65ED2</key>
+		<key>F4BDCBEA0A2058D7A22FE2CF7BF57DE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

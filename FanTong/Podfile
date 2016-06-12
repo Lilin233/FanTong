@@ -13,4 +13,5 @@ pod 'RxCocoa',    '~> 2.0'
 pod 'SDWebImage', '~>3.7'
 pod 'TDOAuth'
 pod 'YYText'
+pod 'MJRefresh'
 end
