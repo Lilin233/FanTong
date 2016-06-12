@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - MJRefresh (3.1.0)
   - OMGHTTPURLRQ/UserAgent (3.1.1)
   - RxCocoa (2.4):
     - RxSwift (~> 2.4)
@@ -27,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - MJRefresh
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
   - SDWebImage (~> 3.7)
@@ -35,6 +37,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
   RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
   RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
@@ -42,6 +45,6 @@ SPEC CHECKSUMS:
   TDOAuth: f7e356e834295b83c7b5066ee72a30f128c5f722
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: cc92ab0195642a268124a473c7795f49fb7fd029
+PODFILE CHECKSUM: 34088d1ece0e0c08259558f62c867ee78bb4a341
 
 COCOAPODS: 1.0.0

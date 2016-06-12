@@ -13,6 +13,8 @@
 		2A5DFE5B1CFEF3B400F2AA06 /* FTMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */; };
 		2A5DFE5D1CFEF3C600F2AA06 /* FTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */; };
 		2A5DFE5F1CFEF3D000F2AA06 /* FTMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */; };
+		2A66908A1D0D7409001CAC22 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6690891D0D7409001CAC22 /* Swift.swift */; };
+		2A66908D1D0D7540001CAC22 /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */; };
 		2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A71CEDB0AA00F9545A /* FTModels.swift */; };
 		2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */; };
 		2A8175AC1CEDB5AF00F9545A /* FTTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */; };
@@ -43,6 +45,9 @@
 		2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMsgViewController.swift; sourceTree = "<group>"; };
 		2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSearchViewController.swift; sourceTree = "<group>"; };
 		2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMeViewController.swift; sourceTree = "<group>"; };
+		2A6690891D0D7409001CAC22 /* Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
+		2A66908B1D0D7540001CAC22 /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A11CEDA65F00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A71CEDB0AA00F9545A /* FTModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTModels.swift; sourceTree = "<group>"; };
@@ -197,6 +202,8 @@
 				FA0B5E281C925C070042770F /* base64.m */,
 				FA0B5E2A1C925C5A0042770F /* HmacSha1.h */,
 				FA0B5E2B1C925C5A0042770F /* HmacSha1.m */,
+				2A66908B1D0D7540001CAC22 /* MJChiBaoZiHeader.h */,
+				2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				FA471EFC1C91689000262EA7 /* FanTong-Bridging-Header.h */,
 				FA471F0B1C916D6900262EA7 /* Module.swift */,
 				FA29EB5E1C9123E700727548 /* AppDelegate.swift */,
+				2A6690891D0D7409001CAC22 /* Swift.swift */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -435,6 +443,7 @@
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
 				2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */,
+				2A66908A1D0D7409001CAC22 /* Swift.swift in Sources */,
 				FA29EB611C9123E700727548 /* ViewController.swift in Sources */,
 				FA471F0C1C916D6900262EA7 /* Module.swift in Sources */,
 				FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */,
@@ -449,6 +458,7 @@
 				2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */,
 				2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */,
 				2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */,
+				2A66908D1D0D7540001CAC22 /* MJChiBaoZiHeader.m in Sources */,
 				2AFA79A91CF7DC010094E855 /* FTLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

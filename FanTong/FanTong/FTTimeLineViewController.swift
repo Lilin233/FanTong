@@ -30,7 +30,9 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         timelineTableView.dataSource = self
         view.addSubview(timelineTableView)
     }
-    
+    func addRefreshView(){
+//        let header = mjchibao
+    }
     //MARK: - NetWork
     func requestData(){
         let urlString2 = self.formatURLString(Constant.FanouURL.STATUSES_HOME_TIMELINE.rawValue, params: nil)
