@@ -35,6 +35,8 @@
 		FA471F111C9191E200262EA7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA471F101C9191E200262EA7 /* Extension.swift */; };
 		FA6B5F611D0C0E7900930D61 /* FTUpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B5F601D0C0E7900930D61 /* FTUpdateStatusViewController.swift */; };
 		FA6B5F631D0C0ED000930D61 /* FTUpdateStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B5F621D0C0ED000930D61 /* FTUpdateStatus.swift */; };
+		FA9CAE8F1D0DAC1800C51179 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE8E1D0DAC1800C51179 /* Swift.swift */; };
+		FA9CAE921D0DAC9100C51179 /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,9 @@
 		FA471F101C9191E200262EA7 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FA6B5F601D0C0E7900930D61 /* FTUpdateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdateStatusViewController.swift; sourceTree = "<group>"; };
 		FA6B5F621D0C0ED000930D61 /* FTUpdateStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdateStatus.swift; sourceTree = "<group>"; };
+		FA9CAE8E1D0DAC1800C51179 /* Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
+		FA9CAE901D0DAC9100C51179 /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +208,8 @@
 				FA0B5E281C925C070042770F /* base64.m */,
 				FA0B5E2A1C925C5A0042770F /* HmacSha1.h */,
 				FA0B5E2B1C925C5A0042770F /* HmacSha1.m */,
+				FA9CAE901D0DAC9100C51179 /* MJChiBaoZiHeader.h */,
+				FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 				FA471EFC1C91689000262EA7 /* FanTong-Bridging-Header.h */,
 				FA471F0B1C916D6900262EA7 /* Module.swift */,
 				FA29EB5E1C9123E700727548 /* AppDelegate.swift */,
+				FA9CAE8E1D0DAC1800C51179 /* Swift.swift */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
 				2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */,
+				FA9CAE921D0DAC9100C51179 /* MJChiBaoZiHeader.m in Sources */,
 				FA6B5F631D0C0ED000930D61 /* FTUpdateStatus.swift in Sources */,
 				FA29EB611C9123E700727548 /* ViewController.swift in Sources */,
 				FA471F0C1C916D6900262EA7 /* Module.swift in Sources */,
@@ -473,6 +482,7 @@
 				2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */,
 				2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */,
 				2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */,
+				FA9CAE8F1D0DAC1800C51179 /* Swift.swift in Sources */,
 				2AFA79A91CF7DC010094E855 /* FTLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

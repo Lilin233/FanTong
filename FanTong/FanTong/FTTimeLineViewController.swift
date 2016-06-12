@@ -21,6 +21,7 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         self.title = "首页"
         requestData()
         addTableView()
+        addRefreshHeaderView()
 
     }
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,10 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "转发", "引用")
         actionSheet.showInView(self.view)
     }
-    
+    func addRefreshHeaderView(){
+        let headerView = MJChiBaoZiHeader(refreshingTarget: self, refreshingAction: #selector(FTTimeLineViewController.requestData))
+        timelineTableView.mj_header = headerView
+    }
 
     //MARK: - NetWork
     func requestData(){
@@ -51,6 +55,7 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
                 self.layouts?.append(layout)
             }
             self.timelineTableView.reloadData()
+            self.timelineTableView.mj_header.endRefreshing()
         }
     }
     //MARK: - TableView Datasource
