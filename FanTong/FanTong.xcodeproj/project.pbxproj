@@ -582,6 +582,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoaThinking.FanTong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9ac75f11-d64e-4e9b-b7d7-82a2305f9a80";
 				SWIFT_OBJC_BRIDGING_HEADER = "FanTong/FanTong-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -603,6 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoaThinking.FanTong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9ac75f11-d64e-4e9b-b7d7-82a2305f9a80";
 				SWIFT_OBJC_BRIDGING_HEADER = "FanTong/FanTong-Bridging-Header.h";
 			};
 			name = Release;
