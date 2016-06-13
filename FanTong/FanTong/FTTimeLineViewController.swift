@@ -8,16 +8,21 @@
 
 import UIKit
 import TDOAuth
-class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate {
+class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FanFouParamsFormatable, FTStatusCellDelegate, UIActionSheetDelegate {
     
     var layouts: [FTStatusLayout]? = []
     var status: [Status]? = []
     var timelineTableView: UITableView!
+    var currentStatus: Status!
+    var actionSheet: UIActionSheet!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "首页"
         requestData()
         addTableView()
+        addRefreshHeaderView()
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,8 +35,13 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
         timelineTableView.dataSource = self
         view.addSubview(timelineTableView)
     }
-    func addRefreshView(){
-//        let header = mjchibao
+    func addActionSheet(){
+        actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "转发", "引用")
+        actionSheet.showInView(self.view)
+    }
+    func addRefreshHeaderView(){
+        let headerView = MJChiBaoZiHeader(refreshingTarget: self, refreshingAction: #selector(FTTimeLineViewController.requestData))
+        timelineTableView.mj_header = headerView
     }
     //MARK: - NetWork
     func requestData(){
@@ -44,16 +54,8 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
                 self.layouts?.append(layout)
             }
             self.timelineTableView.reloadData()
+            self.timelineTableView.mj_header.endRefreshing()
         }
-    }
-    func statusUpdate(arrayParams: Array<String>, dicParams: NSDictionary, strParams: String){
-        let params = self.formatPostParamsString(Constant.FanouURL.STATUSES_UPDATE.rawValue, params: arrayParams, dicParams: dicParams, strParams: strParams)
-//        NetWorkingManager.shareInstance.requestData(.POST, params:params, urlString: Constant.FanouURL.STATUSES_UPDATE.rawValue) { (data) -> () in
-//            let result = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-//            print(result)
-//        }
-        NetWorkingManager.shareInstance.updateStatus(Constant.FanouURL.STATUSES_UPDATE.rawValue, params: params)
-
     }
     //MARK: - TableView Datasource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -85,35 +87,35 @@ class FTTimeLineViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     //MARK: - FTStatusCellDelegate
-    func repostButtonClick(cell: FTTimelineTableViewCell) {
-        print(("id-------------") + cell.layout.status.id);
+    func replyButtonClick(cell: FTTimelineTableViewCell) {
+        self.updateStatus(StatusUpdateType.replyStatus)
+        self.currentStatus = cell.layout.status
     }
-    func repeatButtonClick(cell: FTTimelineTableViewCell) {
-//        print(("id-------------") + cell.layout.status.id);
-//        statusUpdate(["status=\("ft".encodeStringURL())", "repost_status_id=\(cell.layout.status.id.encodeStringURL())"], dicParams: NSDictionary.init(objects: ["ft", cell.layout.status.id], forKeys: ["status", "repost_status_id"]), strParams: "repost_status_id=\(cell.layout.status.id)&status=ft")
-        
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        configuration.timeoutIntervalForRequest = 3
-        configuration.timeoutIntervalForResource = 3
-        let URLSession = NSURLSession(configuration: configuration)
-        
-        let  URLRequest = TDOAuth.URLRequestForPath("/statuses/update.json", parameters: NSDictionary.init(objects: ["ft", cell.layout.status.id], forKeys: ["status", "repost_status_id"]) as [NSObject : AnyObject], host: "api.fanfou.com", consumerKey: Constant.FanfouAPPKey.OAUTH_CONSUMER_KEY.rawValue, consumerSecret: Constant.FanfouAPPKey.OAUTH_CONSUMER_SECRET.rawValue, accessToken: NSUserDefaults.standardUserDefaults().valueForKey("oauth_token")!.componentsSeparatedByString("=").last!, tokenSecret: ((NSUserDefaults.standardUserDefaults().valueForKey("oauth_token_secret") as! String).componentsSeparatedByString("=").last)!, scheme: "http", requestMethod: "POST", dataEncoding: .UrlEncodedForm, headerValues: nil, signatureMethod: .HmacSha1)
-            
-//            [[TDOAuth URLRequestForPath:path parameters:parametersDictionary host:SA_API_HOST consumerKey:SA_API_COMSUMER_KEY consumerSecret:SA_API_COMSUMER_SECRET accessToken:currentUser.token tokenSecret:currentUser.tokenSecret scheme:@"http" requestMethod:method dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1] mutableCopy];
-
-       let task =  URLSession.dataTaskWithRequest(URLRequest) { (data, reponse, error) in
-          print("1111111111111111111111111111")
-            if (error != nil){
-                print(error)
-            }else{
-                print(try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments))
-            }
-        }
-    
-        task.resume()
-    
+    func repostButtonClick(cell: FTTimelineTableViewCell) {
+        self.currentStatus = cell.layout.status
+        addActionSheet()
     }
     func likeButtonClick(cell: FTTimelineTableViewCell) {
         print(("id-------------") + cell.layout.status.id);
     }
+    
+    func updateStatus(updateType: StatusUpdateType){
+        let vc = FTUpdateStatusViewController()
+        vc.status = currentStatus
+        vc.updateType = updateType
+        self.presentViewController(vc, animated: true) { 
+            
+        }
+    }
+    //MARK: - ActionSheet Delegate
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 1{
+            self.updateStatus(StatusUpdateType.repostStatus)
+
+        }else if buttonIndex == 2{
+            self.updateStatus(StatusUpdateType.quoteStatus)
+
+        }
+    }
+
 }

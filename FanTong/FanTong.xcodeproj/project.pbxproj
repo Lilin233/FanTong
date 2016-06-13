@@ -13,8 +13,6 @@
 		2A5DFE5B1CFEF3B400F2AA06 /* FTMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */; };
 		2A5DFE5D1CFEF3C600F2AA06 /* FTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */; };
 		2A5DFE5F1CFEF3D000F2AA06 /* FTMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */; };
-		2A66908A1D0D7409001CAC22 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6690891D0D7409001CAC22 /* Swift.swift */; };
-		2A66908D1D0D7540001CAC22 /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */; };
 		2A8175A81CEDB0AA00F9545A /* FTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A71CEDB0AA00F9545A /* FTModels.swift */; };
 		2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175A91CEDB25A00F9545A /* FTStatusLayout.swift */; };
 		2A8175AC1CEDB5AF00F9545A /* FTTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */; };
@@ -23,7 +21,7 @@
 		2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */; };
 		2AFA79A71CF7DB980094E855 /* FTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA79A61CF7DB980094E855 /* FTBaseViewController.swift */; };
 		2AFA79A91CF7DC010094E855 /* FTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA79A81CF7DC010094E855 /* FTLoginViewController.swift */; };
-		EA8E750588192A328E399E2B /* Pods_FanTong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */; };
+		98083430D8DE539E89F0C950 /* Pods_FanTong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62BDC8B8619B96436EF1BA9 /* Pods_FanTong.framework */; };
 		FA0B5E291C925C070042770F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E281C925C070042770F /* base64.m */; };
 		FA0B5E2C1C925C5A0042770F /* HmacSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2B1C925C5A0042770F /* HmacSha1.m */; };
 		FA0B5E301C925FEA0042770F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B5E2F1C925FEA0042770F /* NSData+Base64.m */; };
@@ -35,19 +33,19 @@
 		FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA471F091C916B5D00262EA7 /* NetWorkingManager.swift */; };
 		FA471F0C1C916D6900262EA7 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA471F0B1C916D6900262EA7 /* Module.swift */; };
 		FA471F111C9191E200262EA7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA471F101C9191E200262EA7 /* Extension.swift */; };
+		FA6B5F611D0C0E7900930D61 /* FTUpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B5F601D0C0E7900930D61 /* FTUpdateStatusViewController.swift */; };
+		FA6B5F631D0C0ED000930D61 /* FTUpdateStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B5F621D0C0ED000930D61 /* FTUpdateStatus.swift */; };
+		FA9CAE8F1D0DAC1800C51179 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE8E1D0DAC1800C51179 /* Swift.swift */; };
+		FA9CAE921D0DAC9100C51179 /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FanTong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTStatusCellView.swift; sourceTree = "<group>"; };
 		2A074FFC1CEEB7FC00FEEA4C /* LKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKLabel.swift; sourceTree = "<group>"; };
 		2A5DFE5A1CFEF3B400F2AA06 /* FTMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMsgViewController.swift; sourceTree = "<group>"; };
 		2A5DFE5C1CFEF3C600F2AA06 /* FTSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSearchViewController.swift; sourceTree = "<group>"; };
 		2A5DFE5E1CFEF3D000F2AA06 /* FTMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMeViewController.swift; sourceTree = "<group>"; };
-		2A6690891D0D7409001CAC22 /* Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
-		2A66908B1D0D7540001CAC22 /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
-		2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A11CEDA65F00F9545A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		2A8175A71CEDB0AA00F9545A /* FTModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTModels.swift; sourceTree = "<group>"; };
@@ -58,8 +56,9 @@
 		2AF4B6D91CE5F05F00120B28 /* FanFouParamsFormatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanFouParamsFormatable.swift; sourceTree = "<group>"; };
 		2AFA79A61CF7DB980094E855 /* FTBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBaseViewController.swift; sourceTree = "<group>"; };
 		2AFA79A81CF7DC010094E855 /* FTLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLoginViewController.swift; sourceTree = "<group>"; };
-		2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.release.xcconfig"; sourceTree = "<group>"; };
-		7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.debug.xcconfig"; sourceTree = "<group>"; };
+		5D2891592537DB17031A07FA /* Pods-FanTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.release.xcconfig"; sourceTree = "<group>"; };
+		78858C40D24B9F998FB6A716 /* Pods-FanTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanTong/Pods-FanTong.debug.xcconfig"; sourceTree = "<group>"; };
+		D62BDC8B8619B96436EF1BA9 /* Pods_FanTong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FanTong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B5E271C925C070042770F /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		FA0B5E281C925C070042770F /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
 		FA0B5E2A1C925C5A0042770F /* HmacSha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HmacSha1.h; sourceTree = "<group>"; };
@@ -77,6 +76,11 @@
 		FA471F091C916B5D00262EA7 /* NetWorkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkingManager.swift; sourceTree = "<group>"; };
 		FA471F0B1C916D6900262EA7 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		FA471F101C9191E200262EA7 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		FA6B5F601D0C0E7900930D61 /* FTUpdateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdateStatusViewController.swift; sourceTree = "<group>"; };
+		FA6B5F621D0C0ED000930D61 /* FTUpdateStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdateStatus.swift; sourceTree = "<group>"; };
+		FA9CAE8E1D0DAC1800C51179 /* Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
+		FA9CAE901D0DAC9100C51179 /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,22 +88,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8E750588192A328E399E2B /* Pods_FanTong.framework in Frameworks */,
+				98083430D8DE539E89F0C950 /* Pods_FanTong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2506B1FBF8677F12F935E6B7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */,
-				2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		2A074FF31CEEA7A400FEEA4C /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +120,7 @@
 				2A074FF41CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift */,
 				2A074FF91CEEB3ED00FEEA4C /* FTStatusCellView.swift */,
 				2AB5D9D51CEF02D500FFB497 /* FTStatusCellToolBarView.swift */,
+				FA6B5F621D0C0ED000930D61 /* FTUpdateStatus.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -133,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2A8175AB1CEDB5AF00F9545A /* FTTimeLineViewController.swift */,
+				FA6B5F601D0C0E7900930D61 /* FTUpdateStatusViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -190,9 +187,18 @@
 			children = (
 				2A8175A11CEDA65F00F9545A /* AFNetworking.framework */,
 				2A81759C1CEDA5EE00F9545A /* AFNetworking.framework */,
-				14B82F84167FDB5DBA8CB0B4 /* Pods_FanTong.framework */,
+				D62BDC8B8619B96436EF1BA9 /* Pods_FanTong.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9BC922983A186A25C3FC8FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78858C40D24B9F998FB6A716 /* Pods-FanTong.debug.xcconfig */,
+				5D2891592537DB17031A07FA /* Pods-FanTong.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FA0B5E261C925BFC0042770F /* Util */ = {
@@ -202,8 +208,8 @@
 				FA0B5E281C925C070042770F /* base64.m */,
 				FA0B5E2A1C925C5A0042770F /* HmacSha1.h */,
 				FA0B5E2B1C925C5A0042770F /* HmacSha1.m */,
-				2A66908B1D0D7540001CAC22 /* MJChiBaoZiHeader.h */,
-				2A66908C1D0D7540001CAC22 /* MJChiBaoZiHeader.m */,
+				FA9CAE901D0DAC9100C51179 /* MJChiBaoZiHeader.h */,
+				FA9CAE911D0DAC9100C51179 /* MJChiBaoZiHeader.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -225,7 +231,7 @@
 				FA29EB5D1C9123E700727548 /* FanTong */,
 				FA29EB5C1C9123E700727548 /* Products */,
 				67584B0CE7ACF805DC0B528B /* Frameworks */,
-				2506B1FBF8677F12F935E6B7 /* Pods */,
+				C9BC922983A186A25C3FC8FB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,7 +262,7 @@
 				FA471EFC1C91689000262EA7 /* FanTong-Bridging-Header.h */,
 				FA471F0B1C916D6900262EA7 /* Module.swift */,
 				FA29EB5E1C9123E700727548 /* AppDelegate.swift */,
-				2A6690891D0D7409001CAC22 /* Swift.swift */,
+				FA9CAE8E1D0DAC1800C51179 /* Swift.swift */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -319,12 +325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA29EB6D1C9123E700727548 /* Build configuration list for PBXNativeTarget "FanTong" */;
 			buildPhases = (
-				6663C6EF41D512B520D08545 /* 📦 Check Pods Manifest.lock */,
+				5DA338DA47C7E63F8B6DE49E /* 📦 Check Pods Manifest.lock */,
 				FA29EB571C9123E700727548 /* Sources */,
 				FA29EB581C9123E700727548 /* Frameworks */,
 				FA29EB591C9123E700727548 /* Resources */,
-				4E1DF254516884D865AABB5D /* 📦 Embed Pods Frameworks */,
-				69D4A9E83AAE3B7376E56B3C /* 📦 Copy Pods Resources */,
+				2F8400A87E0DBDF8D6807578 /* 📦 Embed Pods Frameworks */,
+				77B06F62A3B4B7D558003D23 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,7 +354,7 @@
 				TargetAttributes = {
 					FA29EB5A1C9123E700727548 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Y4CZPABXLV;
+						DevelopmentTeam = T33D97QCKP;
 					};
 				};
 			};
@@ -384,7 +390,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E1DF254516884D865AABB5D /* 📦 Embed Pods Frameworks */ = {
+		2F8400A87E0DBDF8D6807578 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,7 +405,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanTong/Pods-FanTong-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6663C6EF41D512B520D08545 /* 📦 Check Pods Manifest.lock */ = {
+		5DA338DA47C7E63F8B6DE49E /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +420,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		69D4A9E83AAE3B7376E56B3C /* 📦 Copy Pods Resources */ = {
+		77B06F62A3B4B7D558003D23 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,13 +443,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5DFE5B1CFEF3B400F2AA06 /* FTMsgViewController.swift in Sources */,
+				FA6B5F611D0C0E7900930D61 /* FTUpdateStatusViewController.swift in Sources */,
 				FA0B5E291C925C070042770F /* base64.m in Sources */,
 				2A8175AC1CEDB5AF00F9545A /* FTTimeLineViewController.swift in Sources */,
 				FA471F111C9191E200262EA7 /* Extension.swift in Sources */,
 				2AF4B6D71CE5EA1C00120B28 /* Constant.swift in Sources */,
 				2AF4B6DA1CE5F05F00120B28 /* FanFouParamsFormatable.swift in Sources */,
 				2AB5D9D61CEF02D500FFB497 /* FTStatusCellToolBarView.swift in Sources */,
-				2A66908A1D0D7409001CAC22 /* Swift.swift in Sources */,
+				FA9CAE921D0DAC9100C51179 /* MJChiBaoZiHeader.m in Sources */,
+				FA6B5F631D0C0ED000930D61 /* FTUpdateStatus.swift in Sources */,
 				FA29EB611C9123E700727548 /* ViewController.swift in Sources */,
 				FA471F0C1C916D6900262EA7 /* Module.swift in Sources */,
 				FA471F0A1C916B5D00262EA7 /* NetWorkingManager.swift in Sources */,
@@ -458,7 +466,7 @@
 				2A074FF51CEEAA1800FEEA4C /* FTTimelineTableViewCell.swift in Sources */,
 				2A8175AA1CEDB25A00F9545A /* FTStatusLayout.swift in Sources */,
 				2A074FFD1CEEB7FC00FEEA4C /* LKLabel.swift in Sources */,
-				2A66908D1D0D7540001CAC22 /* MJChiBaoZiHeader.m in Sources */,
+				FA9CAE8F1D0DAC1800C51179 /* Swift.swift in Sources */,
 				2AFA79A91CF7DC010094E855 /* FTLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +576,7 @@
 		};
 		FA29EB6E1C9123E700727548 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7883BD0F9839699A1CF361EA /* Pods-FanTong.debug.xcconfig */;
+			baseConfigurationReference = 78858C40D24B9F998FB6A716 /* Pods-FanTong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -590,7 +598,7 @@
 		};
 		FA29EB6F1C9123E700727548 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C0863C54508586C17ABD4D0 /* Pods-FanTong.release.xcconfig */;
+			baseConfigurationReference = 5D2891592537DB17031A07FA /* Pods-FanTong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

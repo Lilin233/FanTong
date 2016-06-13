@@ -54,13 +54,13 @@ class FTStatusCellToolBarView: UIView {
     //MARK: - Actions
     func repostButtonClick(){
         if cell?.delegate is FTTimeLineViewController{
-            cell?.delegate?.repostButtonClick(cell!)
+            cell?.delegate?.replyButtonClick(cell!)
         
         }
     }
     func repeatButtonClick(){
         if cell?.delegate is FTTimeLineViewController{
-            cell?.delegate?.repeatButtonClick(cell!)
+            cell?.delegate?.repostButtonClick(cell!)
             
         }
     }
